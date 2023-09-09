@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
 import AppBar from './layout/app-bar';
+import News from './layout/news';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -34,8 +35,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-white dark:bg-white font-[Gantari] relative">
+        <News />
         <AppBar />
-        {children}</body>
+        {children}
+      </body>
     </html>
   )
 }
