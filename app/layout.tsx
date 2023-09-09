@@ -1,8 +1,11 @@
+"use client";
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import AOS from "aos";
+import 'aos/dist/aos.css';
+import Lenis from "@studio-freight/lenis";
+import { useEffect } from "react";
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,9 +17,22 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  useEffect(() => {
+    const lenis = new Lenis();
+    lenis.on("scroll", (e: any) => { });
+
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
+  useEffect(() => {
+    AOS.init({});
+  }, []);
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="">{children}</body>
     </html>
   )
 }
