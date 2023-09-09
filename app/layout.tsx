@@ -8,6 +8,7 @@ import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
 import AppBar from './layout/app-bar';
 import News from './layout/news';
+import Footer from './layout/footer';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -38,6 +39,7 @@ export default function RootLayout({
         <News />
         <AppBar />
         {children}
+        <Footer />
       </body>
     </html>
   )
