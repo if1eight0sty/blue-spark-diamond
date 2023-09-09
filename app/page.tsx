@@ -1,4 +1,4 @@
-import Image from 'next/image'
+
 import TopHero from './components/top-hero/top-hero'
 import CraftingBeauty from './components/crafting-beauty'
 
