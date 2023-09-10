@@ -25,7 +25,6 @@ const AppBar = () => {
             <nav className="@container z-[1] top-0 sticky isolate">
                 {/* head */}
                 <div className="flex items-center flex-col justify-center  px-4 shadow-sm bg-white z-[2]">
-                    {/* logo section ends here */}
                     <div className="hidden w-full @[55em]:flex items-center justify-between @[55em]:gap-x-4">
                         <Image
                             src={MobileLogo}
