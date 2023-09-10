@@ -1,0 +1,151 @@
+'use client'
+import Image from "next/image";
+import React, { useState } from "react";
+import NepalFlag from "@/public/country-flags/Nepal-Flag.png";
+import ThailandFlag from "@/public/country-flags/Thailand-Flag.png";
+import UKFlag from "@/public/country-flags/UK-Flag.png";
+import { IFlagData } from "./interface";
+import { useGlobalStore } from "@/app/global/store";
+import { IUseGlobalStore } from "@/app/global/interface";
+
+const FlagDropdown = () => {
+    // stores
+    const setCountry = useGlobalStore(
+        (state: IUseGlobalStore) => state.setCountry
+    );
+    // states
+    // open states -> opens the dropdown for country selection
+    const [isOpen, setIsOpen] = useState(false);
+    // flagData -> contains the flag and country code
+    const [flagData, setFlagData] = useState<IFlagData>({
+        flag: NepalFlag,
+        country: "NP",
+    } as IFlagData);
+    // handlers
+    // opens the dropdown
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen);
+    };
+    // closes the dropdown
+    const closeDropdown = () => {
+        setIsOpen(false);
+    };
+    // handles the flag change
+    const handleFlagChange = (flag: IFlagData) => {
+        setFlagData(flag);
+        setIsOpen(false);
+        setCountry(flag.country);
+    };
+    return (
+        <div className="w-[5.5em] ">
+            <div className={`relative group`}>
+                <button
+                    className="flex items-center w-full px-4  font-medium text-gray-100  focus:text-gray-100 focus:outline-none "
+                    type="button"
+                >
+                    <div className="flex items-center gap-x-1">
+                        <Image
+                            src={flagData?.flag}
+                            alt="Nepal flag"
+                            priority
+                            style={{ width: "auto" }}
+                            className="h-[1.22em] w-[1.22em] object-cover"
+                        />
+                        <p className="text-[#505050] mt-[.22rem]">{flagData?.country}</p>
+                        <svg
+                            className={`w-[1.2rem] h-[1.2rem] ml-auto fill-current mt-[3px] ${isOpen ? "transform rotate-180" : ""
+                                }`}
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                                fill="#262626"
+                            />
+                        </svg>
+                    </div>
+                </button>
+                {isOpen && (
+                    <div onClick={closeDropdown} className="fixed inset-0 z-40"></div>
+                )}
+                <ul className="absolute w-ful mt-1 pt-2 pb-1 font-medium text-blue-600 bg-white border-t-2 border-blue-600 rounded shadow-lg dark:border-blue-400 dark:text-gray-400 dark:bg-gray-700 hidden group-hover:block hover:block">
+                    <div
+                        className={` absolute right-3 inline-block w-6 overflow-hidden -translate-x-1/2 -top-3 group-hover:block hover:block`}
+                    >
+                        <div className="w-3 h-3 origin-bottom-left transform rotate-45 bg-blue-600 dark:bg-blue-400 drop-shadow"></div>
+                    </div>
+                    <li>
+                        <div
+                            className="flex items-center justify-between px-4 py-2 whitespace-no-wrap border-b border-blue-200 dark:border-gray-600 dark:hover:bg-gray-600 hover:bg-blue-100 cursor-pointer"
+                            onClick={() =>
+                                handleFlagChange({
+                                    flag: NepalFlag,
+                                    country: "NP",
+                                })
+                            }
+                        >
+                            <div className="flex items-center gap-x-1">
+                                <Image
+                                    src={NepalFlag}
+                                    alt="Nepal flag"
+                                    priority
+                                    style={{ width: "auto" }}
+                                    className="h-[1.22em] w-[1.22em] object-cover"
+                                />
+                                <p className="text-[#505050] dark:text-[#fff] mt-[.22rem]">
+                                    NP
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div
+                            className="flex items-center justify-between px-4 py-2 whitespace-no-wrap border-b border-blue-200 dark:border-gray-600 dark:hover:bg-gray-600 hover:bg-blue-100 cursor-pointer"
+                            onClick={() =>
+                                handleFlagChange({
+                                    flag: ThailandFlag,
+                                    country: "TH",
+                                })
+                            }
+                        >
+                            <div className="flex items-center gap-x-1">
+                                <Image
+                                    src={ThailandFlag}
+                                    alt="Thailand flag"
+                                    priority
+                                    style={{ width: "auto" }}
+                                    className="h-[1.22em] w-[1.22em] object-cover"
+                                />
+                                <p className="text-[#505050] dark:text-[#fff]">TH</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div
+                            className="flex items-center justify-between px-4 py-2 whitespace-no-wrap border-b border-blue-200 dark:border-gray-600 dark:hover:bg-gray-600 hover:bg-blue-100 cursor-pointer"
+                            onClick={() =>
+                                handleFlagChange({
+                                    flag: UKFlag,
+                                    country: "UK",
+                                })
+                            }
+                        >
+                            <div className="flex items-center gap-x-1">
+                                <Image
+                                    src={UKFlag}
+                                    alt="UK flag"
+                                    priority
+                                    style={{ width: "auto" }}
+                                    className="h-[1.22em] w-[1.22em] object-cover"
+                                />
+                                <p className="text-[#505050] dark:text-[#fff]">UK</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    );
+};
+
+export default FlagDropdown;
