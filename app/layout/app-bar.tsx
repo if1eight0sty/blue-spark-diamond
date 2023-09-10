@@ -1,5 +1,7 @@
 "use client";
+
 import Image from "next/image";
+import dynamic from "next/dynamic";
 
 import MobileLogo from "@/public/logos/logo-mobile.png";
 import React, { useState } from "react";
@@ -9,9 +11,16 @@ import { GiBigDiamondRing } from "react-icons/gi";
 import { FaUsers } from "react-icons/fa";
 import { FaQuestion } from "react-icons/fa";
 
-import MenuItems from "./components/menu-items";
-import MenuButton from "./components/menu-button";
-import FlagDropdown from "./components/flag-dropdown";
+const MenuItems = dynamic(() => import('./_components/appbar/menu-items'), {
+    loading: () => <p>Loading...</p>,
+});
+const MenuButton = dynamic(() => import('./_components/appbar/menu-button'), {
+    loading: () => <p>Loading...</p>,
+});
+const FlagDropdown = dynamic(() => import('./_components/appbar/flag-dropdown'), {
+    loading: () => <p>Loading...</p>,
+});
+
 import { useGlobalStore } from "@/app/global/store";
 import { IUseGlobalStore } from "@/app/global/interface";
 const AppBar = () => {
