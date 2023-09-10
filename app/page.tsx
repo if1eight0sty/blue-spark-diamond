@@ -1,6 +1,14 @@
+import 'aos/dist/aos.css';
 
-import TopHero from './components/top-hero/top-hero'
-import CraftingBeauty from './components/crafting-beauty'
+import dynamic from 'next/dynamic';
+
+const TopHero = dynamic(() => import('./components/top-hero/top-hero'), {
+  loading: () => <p>Loading...</p>,
+})
+const CraftingBeauty = dynamic(() => import('./components/crafting-beauty'), {
+  loading: () => <p>Loading...</p>,
+})
+
 import DiamondCut from './components/diamond-cut/diamond-cut'
 import FourCs from './components/four-cs/four-cs'
 
