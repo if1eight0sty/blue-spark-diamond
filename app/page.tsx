@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <main className="bg-white dark:bg-white">
       <TopHero />
-      {/*   <CraftingBeauty />
-      <DiamondCut />*/}
+      <CraftingBeauty />
+      <DiamondCut />
       <FourCs />
     </main>
   )
