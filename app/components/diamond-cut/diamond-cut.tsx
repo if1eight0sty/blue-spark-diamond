@@ -43,7 +43,7 @@ const DiamondCut = () => {
 
   return (
     <>
-      <section className="flex flex-col items-center justify-center overflow-hidden bg-gray-800 py-16 font-poppins dark:bg-gray-800 isolate">
+      <section className="flex flex-col items-center justify-center overflow-hidden bg-gray-800 py-16 font-poppins dark:bg-gray-800 isolate min-h-[95dvh]">
         <div className="text-center my-10">
           <span className="block mb-4 text-xs font-semibold leading-4 tracking-widest text-center text-blue-500 uppercase dark:text-gray-400">
             Diamond
