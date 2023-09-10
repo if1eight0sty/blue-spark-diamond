@@ -25,7 +25,7 @@ import pear from "@/public/diamond-cuts/pear-cut.webp";
 import princess from "@/public/diamond-cuts/princess-cut.webp";
 import round from "@/public/diamond-cuts/round-cut.webp";
 import oval from "@/public/diamond-cuts/oval-cut.webp";
-import logo from "@/public/logo/logo-white-opt.png";
+import logo from "@/public/logos/logo-white.png";
 
 const DiamondCut = () => {
   const smallImages = [
