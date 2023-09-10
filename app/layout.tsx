@@ -5,6 +5,7 @@ import AppBar from './layout/app-bar';
 import News from './layout/news';
 import Footer from './layout/footer';
 import Scroll from './components/_scroll/scroll';
+
 export const metadata: Metadata = {
   title: 'Blue spark diamonds',
   description: "Blue Spark imports raw diamonds from African countries, follows ethical practices, and sells GIA certified diamonds.The company's diamonds are elegant and strong.",
