@@ -18,7 +18,7 @@ const Welcome = () => {
                     </div>
                     <div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 ">
                         <div className="relative">
-                            <h1 className="absolute -top-20 left-0 text-[20px] lg:text-[100px] text-gray-900 font-bold  opacity-5 md:block hidden">
+                            <h1 className="absolute -top-20 left-0 text-[20px] lg:text-[100px] text-gray-900 font-bold  opacity-5 md:block hidden select-none">
                                 About Us
                             </h1>
                             <h1 className="pl-2 text-3xl font-bold border-l-8 border-blue-400 md:text-5xl text-gray-600">
