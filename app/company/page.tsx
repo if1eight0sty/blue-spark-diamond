@@ -3,14 +3,15 @@ import React from "react";
 
 const Welcome = dynamic(() => import("./_components/welcome"));
 const Vision = dynamic(() => import("./_components/vision/vision"));
+const Certification = dynamic(() => import("./_components/certification"));
 
 const Company = () => {
   return (
     <div className="flex flex-col">
       <Welcome />
       <Vision />
-      {/*  <Certification />
-      <Location />
+      <Certification />
+      {/*  <Location />
       <Team />
       <ContactUs /> */}
     </div>
