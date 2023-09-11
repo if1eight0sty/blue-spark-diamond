@@ -35,7 +35,7 @@ const Faq = () => {
 
   return (
     <section className="flex items-center bg-white lg:h-screen">
-      <div className="p-4 mx-auto max-w-7xl">
+      <div className="p-4 mx-auto max-w-7xl text-gray-700">
         <div className="text-center mb-14">
           <h1 className="mb-4 text-3xl font-bold">
             Frequently Asked Questions
@@ -54,8 +54,8 @@ const Faq = () => {
               >
                 <span
                   className={`font-bold ${expandedIndexes.includes(index)
-                      ? "text-blue-500"
-                      : ""
+                    ? "text-blue-500"
+                    : ""
                     }`}
                 >
                   {q.question}
