@@ -34,10 +34,10 @@ const Faq = () => {
   ];
 
   return (
-    <section className="flex items-center bg-white lg:h-screen dark:bg-gray-800">
+    <section className="flex items-center bg-white lg:h-screen">
       <div className="p-4 mx-auto max-w-7xl">
         <div className="text-center mb-14">
-          <h1 className="mb-4 text-3xl font-bold dark:text-white">
+          <h1 className="mb-4 text-3xl font-bold">
             Frequently Asked Questions
           </h1>
           <p className="max-w-xl mx-auto text-gray-500">You Ask - We Answer</p>
@@ -46,18 +46,17 @@ const Faq = () => {
           {questions.map((q, index) => (
             <div
               key={index}
-              className="flex flex-col justify-between mr-20 w-full px-6 py-4 mb-3 bg-white rounded shadow dark:bg-gray-700"
+              className="flex flex-col justify-between mr-20 w-full px-6 py-4 mb-3 bg-white rounded shadow"
             >
               <div
                 className="flex items-center justify-between cursor-pointer"
                 onClick={() => toggleQuestion(index)}
               >
                 <span
-                  className={`font-bold ${
-                    expandedIndexes.includes(index)
-                      ? "text-blue-500 dark:text-blue-400"
-                      : "dark:text-white"
-                  }`}
+                  className={`font-bold ${expandedIndexes.includes(index)
+                      ? "text-blue-500"
+                      : ""
+                    }`}
                 >
                   {q.question}
                 </span>
@@ -82,7 +81,7 @@ const Faq = () => {
                 </div>
               </div>
               {expandedIndexes.includes(index) && (
-                <div className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                <div className="mt-1 text-sm text-gray-500">
                   {q.answer}
                 </div>
               )}

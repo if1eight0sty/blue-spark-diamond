@@ -130,7 +130,7 @@ const FourCS = () => {
                 {/* individual description fin */}
                 <Link href='/four-cs' className='mt-10'>
                   <button data-aos="zoom-out-up" className="explore">
-                    <span className="explore-span"> Explore more</span>
+                    <span className="text-[#585858] explore-span"> Explore more</span>
                   </button>
                 </Link>
               </div>
