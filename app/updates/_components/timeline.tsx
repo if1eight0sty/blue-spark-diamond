@@ -10,7 +10,7 @@ const Timeline = () => {
               <div className="absolute hidden md:block -top-14 left-0 text-[120px] text-gray-400 font-bold opacity-10">
                 TIMELINE
               </div>
-              <h1 className="text-5xl font-bold leading-tight ">
+              <h1 className="text-5xl font-bold leading-tight text-gray-700 ">
                 Company <span className="text-blue-500"> Timeline</span>
               </h1>
               <div className="flex w-24 mt-1 mb-10 overflow-hidden rounded">
