@@ -92,7 +92,7 @@ const Page = () => {
     return (
         <>
             <section
-                className="bg-cover bg-center"
+                className="bg-cover bg-center bg-white"
                 style={{
                     backgroundImage: `url('${background.src}')`,
                     minHeight: "100vh",
@@ -114,7 +114,7 @@ const Page = () => {
                             alt={`${selectedProduct.id}-diamond`}
                             priority
                             style={{ width: "auto" }}
-                            className="order-1 lg:order-2 w-full h-full xl:top-[19rem] xl:right-0 lg:h-[26em] px-5 rounded-md object-cover pt-10 text-justify"
+                            className="order-1 lg:order-2 w-full h-full xl:top-[19rem] xl:right-0 lg:h-[27em] px-5 rounded-md object-cover pt-10 text-justify"
                         />
                     </div>
                 </div>
