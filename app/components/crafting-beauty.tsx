@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import diamondmining1 from "@/public/diamonds/diamond-mining-africa.webp";
@@ -5,8 +6,23 @@ import manufacturingDiamond from "@/public/diamonds/manufacturing-diamond.jpeg";
 import heartDiamondGif from "@/public/diamonds/heart-diamond-gif.gif";
 import processedOre from "@/public/diamonds/processed-ore.webp";
 import diamondCollection1 from "@/public/diamonds/diamond-collection-1.jpeg";
+import { getCldImageUrl, CldImage } from 'next-cloudinary';
 
 const CraftingBeauty = () => {
+  const getImageURL = (
+    height: number,
+    width: number,
+    src: string,
+    crop: string = "limit"
+  ) => {
+    return getCldImageUrl({
+      width,
+      height,
+      src,
+      crop
+    })
+
+  }
   return (
     <section className="flex items-center bg-gray-100 font-poppins mt-20">
       <div className="container justify-center flex-1 px-4 py-4 mx-auto text-left lg:py-10 ">
@@ -19,8 +35,13 @@ const CraftingBeauty = () => {
             <div className="w-full lg:w-1/5 md:w-full lg:mb-0">
               <div className="relative mb-6 overflow-hidden rounded-md shadow-md group">
                 <Image
-                  src={diamondmining1}
-                  className="group-hover:origin-center group-hover:scale-110 group-hover:rotate-3 h-[300px] w-full transition duration-500"
+                  width="960"
+                  height="300"
+                  className="group-hover:origin-center group-hover:scale-110 group-hover:rotate-3 h-[300px] w-full transition duration-500 object-cover"
+                  src={getImageURL(300, 600, 'cld-sample-4')}
+                  sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 20vw,
+                    30vw"
                   alt=""
                 />
                 <div className="absolute inset-0 h-[300px] group-hover:bg-black opacity-50 transition duration-500 z-0"></div>
@@ -41,8 +62,14 @@ const CraftingBeauty = () => {
               </div>
               <div className="relative overflow-hidden rounded-md shadow-md group">
                 <Image
-                  src={processedOre}
-                  className="group-hover:origin-center group-hover:scale-110 group-hover:rotate-3 h-[300px] w-full transition duration-500"
+                  width="960"
+                  height="300"
+                  src={getImageURL(300, 600, 'cld-sample-3')}
+                  sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw"
+                  loading="lazy"
+                  className="group-hover:origin-center group-hover:scale-110 group-hover:rotate-3 h-[300px] w-full transition duration-500 object-cover"
                   alt=""
                 />
                 <div className="absolute inset-0 h-[300px] group-hover:bg-black opacity-50 transition duration-500 z-0"></div>
@@ -67,6 +94,7 @@ const CraftingBeauty = () => {
                 <Image
                   src={heartDiamondGif}
                   alt="diamond picture"
+                  loading="lazy"
                   className="group-hover:origin-center group-hover:scale-110 group-hover:rotate-3 h-[625px] w-full transition duration-500"
                 />
                 <div className="absolute inset-0 h-[620px] group-hover:bg-black opacity-50 transition duration-500 z-0"></div>
@@ -91,6 +119,7 @@ const CraftingBeauty = () => {
                 <Image
                   src={diamondCollection1}
                   className="group-hover:origin-center group-hover:scale-110 group-hover:rotate-3 h-[300px] w-full transition duration-500"
+                  loading="lazy"
                   alt=""
                 />
                 <div className="absolute inset-0 h-[300px] group-hover:bg-black opacity-50 transition duration-500 z-0"></div>
@@ -114,6 +143,7 @@ const CraftingBeauty = () => {
                   src={manufacturingDiamond}
                   className="group-hover:origin-center group-hover:scale-110 group-hover:rotate-3 h-[300px] w-full transition duration-500"
                   alt=""
+                  loading='lazy'
                 />
                 <div className="absolute inset-0 h-[300px] group-hover:bg-black opacity-50 transition duration-500 z-0"></div>
                 <div>

@@ -85,6 +85,7 @@ const DiamondCut = () => {
                   alt={`${image.id}-cut-diamond`}
                   title={`${image.id}-cut-diamond`}
                   style={{ width: "auto" }}
+                  loading="lazy"
                   className="h-[10em] object-cover"
                 />
                 <p className="text-white text-center text-lg font-medium capitalize">

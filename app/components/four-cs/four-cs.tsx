@@ -60,7 +60,7 @@ const FourCS = () => {
                     <Image
                       src={diamond4c}
                       alt="blue spark diamond"
-                      priority
+                      loading='lazy'
                       title="The picture of a diamond"
                       className="h-full w-full object-fill"
                     />
