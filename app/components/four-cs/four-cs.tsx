@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import diamond4c from "@/public/diamonds/diamond4c.png";
 import Link from "next/link";
 import "./style.css"
 import SplitType from "split-type";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { getCldImageUrl } from "next-cloudinary";
 const FourCS = () => {
   gsap.registerPlugin(ScrollTrigger);
   React.useEffect(() => {
@@ -27,6 +27,20 @@ const FourCS = () => {
       });
     });
   }, []);
+
+  const getImageURL = (
+    height: number,
+    width: number,
+    src: string,
+    crop: string = "limit"
+  ) => {
+    return getCldImageUrl({
+      width,
+      height,
+      src,
+      crop
+    })
+  }
   return (
     <>
       <section className="flex py-10 min-h-[95dvh] bg-white @container">
@@ -58,8 +72,13 @@ const FourCS = () => {
                   {/* image section */}
                   <div className="my-8 border-[5px] border-blue-500 h-[25em] w-[25em] rounded-full flex justify-center items-center relative text-[#585858]">
                     <Image
-                      src={diamond4c}
-                      alt="blue spark diamond"
+                      width="300"
+                      height="300"
+                      src={getImageURL(800, 1080, 'blue-spark/diamonds/diamond4c')}
+                      sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 40vw,
+                    20vw"
+                      alt="a diamond picture, vertical sharp diamond"
                       loading='lazy'
                       title="The picture of a diamond"
                       className="h-full w-full object-fill"
