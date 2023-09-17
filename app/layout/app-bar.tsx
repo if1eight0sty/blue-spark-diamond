@@ -3,7 +3,6 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
-import MobileLogo from "@/public/logos/logo-mobile.png";
 import React, { useState } from "react";
 
 import { FaHome } from "react-icons/fa";
@@ -12,23 +11,34 @@ import { FaUsers } from "react-icons/fa";
 import { FaQuestion } from "react-icons/fa";
 
 const MenuItems = dynamic(() => import('./_components/appbar/menu-items'), {
-    loading: () => <p>Loading...</p>,
 });
 const MenuButton = dynamic(() => import('./_components/appbar/menu-button'), {
-    loading: () => <p>Loading...</p>,
 });
 const FlagDropdown = dynamic(() => import('./_components/appbar/flag-dropdown'), {
-    loading: () => <p>Loading...</p>,
 });
 
 import { useGlobalStore } from "@/app/global/store";
 import { IUseGlobalStore } from "@/app/global/interface";
+import { getCldImageUrl } from "next-cloudinary";
 const AppBar = () => {
     // stores
     const country = useGlobalStore((state: IUseGlobalStore) => state.country);
     // states
     // toggleMenu -> toggles the menu for a small device
     const [toggleMenu, setToggleMenu] = useState(false);
+    const getImageURL = (
+        height: number,
+        width: number,
+        src: string,
+        crop: string = "limit"
+    ) => {
+        return getCldImageUrl({
+            width,
+            height,
+            src,
+            crop
+        })
+    }
     return (
         <>
             <nav className="@container z-[1] top-0 sticky isolate">
@@ -36,13 +46,18 @@ const AppBar = () => {
                 <div className="flex items-center flex-col justify-center  px-4 shadow-sm bg-white z-[2]">
                     <div className="hidden w-full @[55em]:flex items-center justify-between @[55em]:gap-x-4">
                         <Image
-                            src={MobileLogo}
-                            alt="blue spark diamonds"
+                            height={200}
+                            width={140}
+                            src={getImageURL(200, 400, "blue-spark/logos/logo-mobile")}
+                            alt="blue spark diamonds logo"
                             priority
-                            style={{ width: "auto" }}
-                            className="h-[3.75em] w-[3.75em] @[55em]:w-[4em] @[55em]:h-[4em] object-cover -mt-1.5 cursor-pointer p-1"
+                            sizes="(max-width: 768px) 90vw,
+                    (max-width: 1200px) 20vw,
+                    30vw"
+                            className=" -mt-1.5 cursor-pointer p-1"
                         />
-                        {/* menus for the larger screen */}
+                        {/* me
+                        height={200}nus for the larger screen */}
                         <ul className="gap-x-2 flex @[50em]:gap-x-4 @[60em]:gap-x-7 mb-1 items-baseline">
                             <MenuItems link="/" menu="Home" />
                             <MenuItems link="/product" menu="Product" />
@@ -63,10 +78,14 @@ const AppBar = () => {
                     </div>
                     <div className="flex @[55em]:hidden items-center justify-between w-full py-2">
                         <Image
-                            src={MobileLogo}
+                            height={200}
+                            width={140}
+                            src={getImageURL(200, 400, "blue-spark/logos/logo-mobile")}
                             alt="blue spark diamonds"
                             priority
-                            style={{ width: "auto" }}
+                            sizes="(max-width: 768px) 90vw,
+                    (max-width: 1200px) 20vw,
+                    30vw"
                             className="h-[3.5em] w-[6.5em] -mt-[.7em] cursor-pointer"
                             title="blue spark diamonds"
                         />

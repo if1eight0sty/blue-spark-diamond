@@ -1,24 +1,35 @@
 'use client'
 import Image from "next/image";
 import React, { useState } from "react";
-import NepalFlag from "@/public/country-flags/Nepal-Flag.png";
-import ThailandFlag from "@/public/country-flags/Thailand-Flag.png";
-import UKFlag from "@/public/country-flags/UK-Flag.png";
 import { IFlagData } from "./interface";
 import { useGlobalStore } from "@/app/global/store";
 import { IUseGlobalStore } from "@/app/global/interface";
+import { getCldImageUrl } from "next-cloudinary";
 
 const FlagDropdown = () => {
     // stores
     const setCountry = useGlobalStore(
         (state: IUseGlobalStore) => state.setCountry
     );
+    const getImageURL = (
+        height: number,
+        width: number,
+        src: string,
+        crop: string = "limit"
+    ) => {
+        return getCldImageUrl({
+            width,
+            height,
+            src,
+            crop
+        })
+    }
     // states
     // open states -> opens the dropdown for country selection
     const [isOpen, setIsOpen] = useState(false);
     // flagData -> contains the flag and country code
     const [flagData, setFlagData] = useState<IFlagData>({
-        flag: NepalFlag,
+        flag: getImageURL(200, 400, "blue-spark/country-flags/Nepal-Flag"),
         country: "NP",
     } as IFlagData);
     // handlers
@@ -36,6 +47,7 @@ const FlagDropdown = () => {
         setIsOpen(false);
         setCountry(flag.country);
     };
+
     return (
         <div className="w-[5.5em] ">
             <div className={`relative group`}>
@@ -48,7 +60,8 @@ const FlagDropdown = () => {
                             src={flagData?.flag}
                             alt="Nepal flag"
                             priority
-                            style={{ width: "auto" }}
+                            width={150}
+                            height={150}
                             className="h-[1.22em] w-[1.22em] object-cover"
                         />
                         <p className="text-[#505050] mt-[.22rem]">{flagData?.country}</p>
@@ -68,7 +81,7 @@ const FlagDropdown = () => {
                 {isOpen && (
                     <div onClick={closeDropdown} className="fixed inset-0 z-40"></div>
                 )}
-                <ul className="absolute w-ful mt-1 pt-2 pb-1 font-medium text-blue-600 bg-white border-t-2 border-blue-600 rounded shadow-lg dark:border-blue-400 dark:text-gray-400 dark:bg-gray-700 hidden group-hover:block hover:block">
+                <ul className="absolute mt-1 pt-2 pb-1 font-medium text-blue-600 bg-white border-t-2 border-blue-600 rounded shadow-lg dark:border-blue-400 dark:text-gray-400 dark:bg-gray-700 hidden group-hover:block hover:block">
                     <div
                         className={` absolute right-3 inline-block w-6 overflow-hidden -translate-x-1/2 -top-3 group-hover:block hover:block`}
                     >
@@ -79,17 +92,19 @@ const FlagDropdown = () => {
                             className="flex items-center justify-between px-4 py-2 whitespace-no-wrap border-b border-blue-200 dark:border-gray-600 dark:hover:bg-gray-600 hover:bg-blue-100 cursor-pointer"
                             onClick={() =>
                                 handleFlagChange({
-                                    flag: NepalFlag,
+                                    flag: getImageURL(200, 400, "blue-spark/country-flags/Nepal-Flag"),
                                     country: "NP",
                                 })
                             }
                         >
                             <div className="flex items-center gap-x-1">
                                 <Image
-                                    src={NepalFlag}
-                                    alt="Nepal flag"
+                                    src={getImageURL(200, 400, "blue-spark/country-flags/Nepal-Flag")}
+                                    alt="Nepal's national flag"
                                     priority
-                                    style={{ width: "auto" }}
+                                    sizes="(max-width: 768px) 90vw, (max-width: 1200px) 20vw, 30vw"
+                                    width={150}
+                                    height={150}
                                     className="h-[1.22em] w-[1.22em] object-cover"
                                 />
                                 <p className="text-[#505050] dark:text-[#fff] mt-[.22rem]">
@@ -103,17 +118,19 @@ const FlagDropdown = () => {
                             className="flex items-center justify-between px-4 py-2 whitespace-no-wrap border-b border-blue-200 dark:border-gray-600 dark:hover:bg-gray-600 hover:bg-blue-100 cursor-pointer"
                             onClick={() =>
                                 handleFlagChange({
-                                    flag: ThailandFlag,
+                                    flag: getImageURL(200, 400, "blue-spark/country-flags/Thailand-Flag"),
                                     country: "TH",
                                 })
                             }
                         >
                             <div className="flex items-center gap-x-1">
                                 <Image
-                                    src={ThailandFlag}
-                                    alt="Thailand flag"
+                                    src={getImageURL(200, 400, "blue-spark/country-flags/Thailand-Flag")}
+                                    alt="Thailand's national flag"
                                     priority
-                                    style={{ width: "auto" }}
+                                    sizes="(max-width: 768px) 90vw, (max-width: 1200px) 20vw, 30vw"
+                                    width={150}
+                                    height={150}
                                     className="h-[1.22em] w-[1.22em] object-cover"
                                 />
                                 <p className="text-[#505050] dark:text-[#fff]">TH</p>
@@ -125,17 +142,19 @@ const FlagDropdown = () => {
                             className="flex items-center justify-between px-4 py-2 whitespace-no-wrap border-b border-blue-200 dark:border-gray-600 dark:hover:bg-gray-600 hover:bg-blue-100 cursor-pointer"
                             onClick={() =>
                                 handleFlagChange({
-                                    flag: UKFlag,
+                                    flag: getImageURL(200, 400, "blue-spark/country-flags/UK-Flag"),
                                     country: "UK",
                                 })
                             }
                         >
                             <div className="flex items-center gap-x-1">
                                 <Image
-                                    src={UKFlag}
-                                    alt="UK flag"
+                                    src={getImageURL(200, 400, "blue-spark/country-flags/UK-Flag")}
+                                    alt="United Kingdom's national flag"
                                     priority
-                                    style={{ width: "auto" }}
+                                    sizes="(max-width: 768px) 90vw, (max-width: 1200px) 20vw, 30vw"
+                                    width={150}
+                                    height={150}
                                     className="h-[1.22em] w-[1.22em] object-cover"
                                 />
                                 <p className="text-[#505050] dark:text-[#fff]">UK</p>

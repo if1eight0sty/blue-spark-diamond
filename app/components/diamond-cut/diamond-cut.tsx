@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,30 +16,58 @@ import "./styles.css";
 // import required modules
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 
-import asscher from "@/public/diamond-cuts/asscher-cut.webp";
-import cushion from "@/public/diamond-cuts/cushion-cut.webp";
-import emerald from "@/public/diamond-cuts/emerald-cut.webp";
-import heart from "@/public/diamond-cuts/heart-cut.webp";
-import marquise from "@/public/diamond-cuts/marquise-cut.webp";
-import pear from "@/public/diamond-cuts/pear-cut.webp";
-import princess from "@/public/diamond-cuts/princess-cut.webp";
-import round from "@/public/diamond-cuts/round-cut.webp";
-import oval from "@/public/diamond-cuts/oval-cut.webp";
-import logo from "@/public/logos/logo-white.png";
+// import asscher from "@/public/diamond-cuts/asscher-cut.webp";
+// import cushion from "@/public/diamond-cuts/cushion-cut.webp";
+// import emerald from "@/public/diamond-cuts/emerald-cut.webp";
+// import heart from "@/public/diamond-cuts/heart-cut.webp";
+// import marquise from "@/public/diamond-cuts/marquise-cut.webp";
+// import pear from "@/public/diamond-cuts/pear-cut.webp";
+// import princess from "@/public/diamond-cuts/princess-cut.webp";
+// import round from "@/public/diamond-cuts/round-cut.webp";
+// import oval from "@/public/diamond-cuts/oval-cut.webp";
+// import logo from "@/public/logos/logo-white.png";
+import { getCldImageUrl } from "next-cloudinary";
 
 const DiamondCut = () => {
+  const getImageURL = (
+    height: number,
+    width: number,
+    src: string,
+    crop: string = "limit"
+  ) => {
+    return getCldImageUrl({
+      width,
+      height,
+      src,
+      crop
+    })
+  }
+
   const smallImages = [
-    { id: "Blue Spark Diamond", src: logo },
-    { id: "asscher", src: asscher },
-    { id: "cushion", src: cushion },
-    { id: "emerald", src: emerald },
-    { id: "marquise", src: marquise },
-    { id: "princess", src: princess },
-    { id: "heart", src: heart },
-    { id: "pear", src: pear },
-    { id: "round", src: round },
-    { id: "oval", src: oval },
+    { id: "Blue Spark Diamond", src: getImageURL(200, 400, "blue-spark/logos/logo-white") },
+    { id: "asscher", src: getImageURL(200, 300, "blue-spark/diamond-cuts/asscher-cut") },
+    { id: "cushion", src: getImageURL(200, 300, "blue-spark/diamond-cuts/cushion-cut") },
+    { id: "emerald", src: getImageURL(200, 300, "blue-spark/diamond-cuts/emerald-cut") },
+    { id: "marquise", src: getImageURL(200, 300, "blue-spark/diamond-cuts/marquise-cut") },
+    { id: "princess", src: getImageURL(200, 300, "blue-spark/diamond-cuts/princess-cut") },
+    { id: "heart", src: getImageURL(200, 300, "blue-spark/diamond-cuts/heart-cut") },
+    { id: "pear", src: getImageURL(200, 300, "blue-spark/diamond-cuts/pear-cut") },
+    { id: "round", src: getImageURL(200, 300, "blue-spark/diamond-cuts/round-cut") },
+    { id: "oval", src: getImageURL(200, 300, "blue-spark/diamond-cuts/oval-cut") },
+    // { id: "oval", src: oval },
   ];
+  //  const smallImages = [
+  //   { id: "Blue Spark Diamond", src: "blue-spark/diamonds/logo-white" },
+  //   { id: "asscher", src: asscher },
+  //   { id: "cushion", src: cushion },
+  //   { id: "emerald", src: emerald },
+  //   { id: "marquise", src: marquise },
+  //   { id: "princess", src: princess },
+  //   { id: "heart", src: heart },
+  //   { id: "pear", src: pear },
+  //   { id: "round", src: round },
+  //   { id: "oval", src: oval },
+  // ];
 
   return (
     <>
@@ -81,11 +109,20 @@ const DiamondCut = () => {
                 className="flex flex-col gap-2 justify-center items-center bg-gray-800 h-full scale-95"
               >
                 <Image
+                  width="200"
+                  height="200"
+                  // src={getImageURL(100, 200, image.src)}
                   src={image.src}
-                  alt={`${image.id}-cut-diamond`}
-                  title={`${image.id}-cut-diamond`}
+                  // sizes="(max-width: 768px) 100vw,
+                  //   (max-width: 1200px) 40vw,
+                  //   20vw"
+                  // sizes="100%"
                   style={{ width: "auto" }}
-                  className="h-[10em] object-cover"
+                  title={`${image.id}-cut-diamond`}
+                  alt={`${image.id}`}
+                  loading="lazy"
+                  property=""
+                  className="h-[10em] object-fill"
                 />
                 <p className="text-white text-center text-lg font-medium capitalize">
                   {image.id}
