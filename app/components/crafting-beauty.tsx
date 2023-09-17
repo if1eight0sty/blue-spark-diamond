@@ -65,6 +65,7 @@ const CraftingBeauty = () => {
                     20vw"
                   loading="lazy"
                   className="group-hover:origin-center group-hover:scale-110 group-hover:rotate-3 h-[300px] w-full transition duration-500 object"
+
                   alt="A refined oer of diamond"
                 />
                 <div className="absolute inset-0 h-[300px] group-hover:bg-black opacity-50 transition duration-500 z-0"></div>

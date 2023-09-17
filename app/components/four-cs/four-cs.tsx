@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +11,7 @@ import { getCldImageUrl } from "next-cloudinary";
 const FourCS = () => {
   gsap.registerPlugin(ScrollTrigger);
   React.useEffect(() => {
-    const split = document.querySelectorAll(".split");
+    const split = document.querySelectorAll(".split-4c");
     split.forEach((el) => {
       const text = new SplitType(el as HTMLElement, {
         types: "chars",
@@ -87,7 +88,7 @@ const FourCS = () => {
                   {/* image section fin*/}
                   {/* small description od 4c */}
                   <div className="text-gray-500 flex flex-col gap-y-2 text-[.95rem] leading-[1.75] max-w-[54em] text-justify px-2 ">
-                    <p className="split">The 4Cs, namely Carat, Cut, Clarity and Color decide the value of a diamond. This universal language was introduced to the world and established through the GIA. The 4Cs are very important in Diamond Grading reports. It&apos;s crucial to learn about the 4Cs of Diamond before purchasing one. At Blue Spark, we hope to educate our customers on the 4Cs very comprehensively.</p>
+                    <p className="split-4c">The 4Cs, namely Carat, Cut, Clarity and Color decide the value of a diamond. This universal language was introduced to the world and established through the GIA. The 4Cs are very important in Diamond Grading reports. It&apos;s crucial to learn about the 4Cs of Diamond before purchasing one. At Blue Spark, we hope to educate our customers on the 4Cs very comprehensively.</p>
                   </div>
                   {/* description section fin */}
                 </div>
