@@ -87,17 +87,15 @@ const CraftingBeauty = () => {
             </div>
             <div className="w-full md:w-full lg:w-1/2 lg:mb-0">
               <div className="relative overflow-hidden rounded-md shadow-md group">
-                <Image
-                  width="300"
-                  height="300"
-                  src={getImageURL(800, 1080, 'blue-spark/diamonds/heart-diamond-gif')}
-                  sizes="(max-width: 768px) 100vw,
-                    (max-width: 1200px) 40vw,
-                    20vw"
-                  alt="A heart diamond gif"
-                  loading="lazy"
+                <video
                   className="group-hover:origin-center group-hover:scale-110 group-hover:rotate-3 h-[300px] lg:h-[625px] w-full transition duration-500 object-cover"
-                />
+                  autoPlay
+                  loop
+                  muted
+                >
+                  <source src={"https://res.cloudinary.com/dnfq9u2nu/video/upload/v1695049520/blue-spark/videos/heart-diamond.webm"} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
                 <div className="absolute inset-0 h-[620px] group-hover:bg-black opacity-50 transition duration-500 z-0"></div>
                 <div>
                   <div className="absolute z-10 hidden group-hover:block top-4 right-4"></div>

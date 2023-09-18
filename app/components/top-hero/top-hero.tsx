@@ -32,24 +32,15 @@ const Landing = () => {
         <div className=" px-4 mx-auto">
           <div className="max-w-5xl mx-auto text-center">
             <div className="relative">
-              {/* <video
+              <video
                 className="relative z-50 block w-full shadow-lg lg:h-4/6 rounded-lg border"
                 autoPlay
                 loop
                 muted
               >
-                <source src="/videos/Intro.mp4" type="video/mp4" />
+                <source src={"https://res.cloudinary.com/dnfq9u2nu/video/upload/v1695049529/blue-spark/videos/intro.webm"} type="video/mp4" />
                 Your browser does not support the video tag.
-              </video> */}
-              <iframe
-                width="1190"
-                height="669"
-                src="https://www.youtube.com/embed/ehOZNIOoWHQ?controls=0&showinfo=0&rel=0&modestbranding=1"
-                title="Introduction to Blue Spark Diamond Company"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-
+              </video>
               <div className="absolute top-0 right-0 hidden -mt-6 opacity-25 lg:block lg:-mt-20 lg:-mr-20 lg:w-auto bg-enable-background w-0 h-0 min-w-512 min-h-512">
                 <svg
                   height="512px"
