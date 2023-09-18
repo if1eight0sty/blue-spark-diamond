@@ -1,9 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-
-import Logo5 from "@/public/logos/full-logo.png";
-import background from "@/public/background/footer-background.webp";
+import { getCldImageUrl } from "next-cloudinary";
 
 const CopyRight = dynamic(() => import("./_components/footer/copy-right"));
 const Socials = dynamic(() => import("./_components/footer/socials"));
@@ -14,25 +12,35 @@ const Subscribe = dynamic(() => import("./_components/footer/subscribe"));
 const Contacts = dynamic(() => import("./_components/footer/contacts"));
 
 const Footer = () => {
+  const getImageURL = (
+    height: number,
+    width: number,
+    src: string,
+    crop: string = "limit"
+  ) => {
+    return getCldImageUrl({
+      width,
+      height,
+      src,
+      crop,
+    });
+  };
   return (
     <>
       <div
         className="flex flex-col bg-cover bg-center bg-white @container"
         style={{
-          backgroundImage: `url('${background.src}')`,
+          backgroundImage: `url('${getImageURL(
+            960,
+            1080,
+            "blue-spark/background/footer-background"
+          )}')`,
         }}
       >
         {/* top container */}
         <div className="flex justify-center items-center px-5 py-16 lg:py-5">
           <Contacts />
         </div>
-        <Image
-          src="/certificate/sbu4rdchinhv7rvivggz"
-          alt=""
-          property=""
-          width={200}
-          height={200}
-        />
         {/* horizontal bar */}
         <hr className="flex flex-col items-center justify-between mx-5 py-3" />
         {/* middle container */}
@@ -42,13 +50,14 @@ const Footer = () => {
             <div className="flex flex-col items-center lg:items-start gap-5">
               {/* logo */}
               <Image
-                src={Logo5}
-                alt="logo"
+                src={getImageURL(200, 400, "blue-spark/logos/full-logo")}
+                alt="blue spark diamonds"
                 priority
+                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 20vw, 30vw"
                 width={150}
                 height={150}
-                className=""
                 style={{ width: "auto" }}
+                className=""
               />
               <p className="text-[#151542] text-sm font-light text-[13px] max-w-xs text-center lg:text-left">
                 A tailored experience for all customers.
