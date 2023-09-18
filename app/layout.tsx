@@ -1,23 +1,23 @@
+import "./globals.css";
+import "aos/dist/aos.css";
 
-import './globals.css'
-import 'aos/dist/aos.css';
+import type { Metadata } from "next";
 
-import type { Metadata } from 'next'
-
-import AppBar from './layout/app-bar';
-import News from './layout/news';
-import Footer from './layout/footer';
-import Scroll from './components/_scroll/scroll';
+import AppBar from "./layout/app-bar";
+import News from "./layout/news";
+import Footer from "./layout/footer";
+import Scroll from "./components/_scroll/scroll";
 
 export const metadata: Metadata = {
-  title: 'Blue spark diamonds',
-  description: "Blue Spark imports raw diamonds from African countries, follows ethical practices, and sells GIA certified diamonds.The company's diamonds are elegant and strong.",
-}
+  title: "Blue spark diamonds",
+  description:
+    "Blue Spark imports raw diamonds from African countries, follows ethical practices, and sells GIA certified diamonds.The company's diamonds are elegant and strong.",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -30,5 +30,5 @@ export default function RootLayout({
         </Scroll>
       </body>
     </html>
-  )
+  );
 }
