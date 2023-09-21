@@ -24,7 +24,7 @@ const Welcome = () => {
             height="600"
             className="w-full h-full object-cover"
             src={getImageURL(600, 1920, 'blue-spark/company/company')}
-            alt="company interior"
+            alt="interior of the company, Blue Spark Diamond"
             priority
             sizes="100vw"
           />
