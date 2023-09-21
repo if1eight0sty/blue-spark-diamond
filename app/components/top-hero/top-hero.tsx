@@ -35,7 +35,7 @@ const Landing = () => {
               <video
                 className="relative z-50 block w-full shadow-lg lg:h-4/6 rounded-lg border"
                 autoPlay
-                loop
+                // loop
                 muted
               >
                 <source src={"https://res.cloudinary.com/dnfq9u2nu/video/upload/v1695049529/blue-spark/videos/intro.webm"} type="video/mp4" />

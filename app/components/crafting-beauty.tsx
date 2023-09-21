@@ -5,17 +5,16 @@ import Image from "next/image";
 import { getCldImageUrl } from 'next-cloudinary';
 
 const CraftingBeauty = () => {
+  // get image url from cloudinary based on the image name/public id
   const getImageURL = (
     height: number,
     width: number,
     src: string,
-    crop: string = "limit"
   ) => {
     return getCldImageUrl({
       width,
       height,
       src,
-      crop
     })
   }
   return (
