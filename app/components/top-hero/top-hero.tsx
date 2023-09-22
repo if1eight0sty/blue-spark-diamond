@@ -38,7 +38,12 @@ const Landing = () => {
                 loop
                 muted
               >
-                <source src={"https://res.cloudinary.com/dnfq9u2nu/video/upload/v1695049529/blue-spark/videos/intro.webm"} type="video/mp4" />
+                <source
+                  src={
+                    "https://res.cloudinary.com/dnfq9u2nu/video/upload/v1695049529/blue-spark/videos/intro.webm"
+                  }
+                  type="video/mp4"
+                />
                 Your browser does not support the video tag.
               </video>
               <div className="absolute top-0 right-0 hidden -mt-6 opacity-25 lg:block lg:-mt-20 lg:-mr-20 lg:w-auto bg-enable-background w-0 h-0 min-w-512 min-h-512">
