@@ -109,20 +109,21 @@ const AppBar = () => {
                         {/* ham-burger fin */}
                     </div>
                 </div>
+                {/* menus for a small device */}
+                {/* menus starts */}
+                <aside
+                    className={`fixed right-0 top-[4.9em] w-[15em] h-[100dvh] z-[1] bg-gray-800 backdrop-blur-lg text-[#fff] transition @[50em]:hidden p-4 ${toggleMenu ? "" : "translate-x-[100%] duration-[.9s]"
+                        }`}
+                >
+                    <ul className="w-full flex flex-col gap-y-3">
+                        <MenuButton menu="Home" link="/" icon={FaHome} />
+                        <MenuButton menu="Products" link="/product" icon={GiBigDiamondRing} />
+                        <MenuButton menu="Company" link="/company" icon={FaUsers} />
+                        <MenuButton menu="News & updates" link="/updates" icon={FaQuestion} />
+                    </ul>
+                </aside>
             </nav>
-            {/* menus for a small device */}
-            {/* menus starts */}
-            <aside
-                className={`fixed right-0 top-[4.9em] w-[15em] h-[100dvh] z-[1] bg-gray-800 backdrop-blur-lg text-[#fff] transition @[50em]:hidden p-4 ${toggleMenu ? "" : "translate-x-[100%] duration-[.9s]"
-                    }`}
-            >
-                <ul className="w-full flex flex-col gap-y-3">
-                    <MenuButton menu="Home" link="/" icon={FaHome} />
-                    <MenuButton menu="Products" link="/product" icon={GiBigDiamondRing} />
-                    <MenuButton menu="Company" link="/company" icon={FaUsers} />
-                    <MenuButton menu="News & updates" link="/updates" icon={FaQuestion} />
-                </ul>
-            </aside>
+
         </>
     );
 };
