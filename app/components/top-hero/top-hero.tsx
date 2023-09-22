@@ -35,7 +35,7 @@ const Landing = () => {
               <video
                 className="relative z-50 block w-full shadow-lg lg:h-4/6 rounded-lg border"
                 autoPlay
-                loop
+                // loop
                 muted
               >
                 <source

@@ -26,17 +26,16 @@ const AppBar = () => {
     // states
     // toggleMenu -> toggles the menu for a small device
     const [toggleMenu, setToggleMenu] = useState(false);
+    // get image url from cloudinary based on the image name/public id
     const getImageURL = (
         height: number,
         width: number,
         src: string,
-        crop: string = "limit"
     ) => {
         return getCldImageUrl({
             width,
             height,
             src,
-            crop
         })
     }
     return (

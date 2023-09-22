@@ -15,17 +15,6 @@ import "./styles.css";
 
 // import required modules
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
-
-// import asscher from "@/public/diamond-cuts/asscher-cut.webp";
-// import cushion from "@/public/diamond-cuts/cushion-cut.webp";
-// import emerald from "@/public/diamond-cuts/emerald-cut.webp";
-// import heart from "@/public/diamond-cuts/heart-cut.webp";
-// import marquise from "@/public/diamond-cuts/marquise-cut.webp";
-// import pear from "@/public/diamond-cuts/pear-cut.webp";
-// import princess from "@/public/diamond-cuts/princess-cut.webp";
-// import round from "@/public/diamond-cuts/round-cut.webp";
-// import oval from "@/public/diamond-cuts/oval-cut.webp";
-// import logo from "@/public/logos/logo-white.png";
 import { getCldImageUrl } from "next-cloudinary";
 
 const DiamondCut = () => {
@@ -33,13 +22,11 @@ const DiamondCut = () => {
     height: number,
     width: number,
     src: string,
-    crop: string = "limit"
   ) => {
     return getCldImageUrl({
       width,
       height,
       src,
-      crop
     })
   }
 
@@ -54,20 +41,8 @@ const DiamondCut = () => {
     { id: "pear", src: getImageURL(200, 300, "blue-spark/diamond-cuts/pear-cut") },
     { id: "round", src: getImageURL(200, 300, "blue-spark/diamond-cuts/round-cut") },
     { id: "oval", src: getImageURL(200, 300, "blue-spark/diamond-cuts/oval-cut") },
-    // { id: "oval", src: oval },
   ];
-  //  const smallImages = [
-  //   { id: "Blue Spark Diamond", src: "blue-spark/diamonds/logo-white" },
-  //   { id: "asscher", src: asscher },
-  //   { id: "cushion", src: cushion },
-  //   { id: "emerald", src: emerald },
-  //   { id: "marquise", src: marquise },
-  //   { id: "princess", src: princess },
-  //   { id: "heart", src: heart },
-  //   { id: "pear", src: pear },
-  //   { id: "round", src: round },
-  //   { id: "oval", src: oval },
-  // ];
+
 
   return (
     <>
@@ -111,12 +86,7 @@ const DiamondCut = () => {
                 <Image
                   width="200"
                   height="200"
-                  // src={getImageURL(100, 200, image.src)}
                   src={image.src}
-                  // sizes="(max-width: 768px) 100vw,
-                  //   (max-width: 1200px) 40vw,
-                  //   20vw"
-                  // sizes="100%"
                   style={{ width: "auto" }}
                   title={`${image.id}-cut-diamond`}
                   alt={`${image.id}`}

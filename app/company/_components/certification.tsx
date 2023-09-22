@@ -2,25 +2,36 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import gia from "@/public/certificate/gia.jpg";
-import kimberly from "@/public/certificate/WDC-Kimberly.webp";
+import { getCldImageUrl } from 'next-cloudinary';
 
 const Certification = () => {
+  // states
   const [currentSlide, setCurrentSlide] = useState(0);
-
+  // get image url from cloudinary based on the image name/public id
+  const getImageURL = (
+    height: number,
+    width: number,
+    src: string,
+  ) => {
+    return getCldImageUrl({
+      width,
+      height,
+      src,
+    })
+  }
   const slides = [
     {
       title: "GIA",
       description:
         "The Gemological Institute of America (GIA), headquartered in California, is a distinguished non-profit organization devoted to gemology and the jewelry arts. Since its establishment in the 1930s, GIA has been at the forefront of pioneering research in the field of gems. All diamonds available through Blue Spark are proudly GIA Certified.",
-      image: gia,
+      image: getImageURL(300, 600, 'blue-spark/certificate/gia'),
       authorized: "Authorized by GIA",
     },
     {
       title: "Kimberly",
       description:
         "The Kimberly Process, which has been active for over 19 years, unites organizations, civil societies, administration, and industries to reduce the flow of conflict diamonds. It has brought together 82 countries worldwide and is underpinned by the United Nations Mandate. All Diamonds sold through Blue Spark have received the Kimberly Process Certification.",
-      image: kimberly,
+      image: getImageURL(200, 600, 'blue-spark/certificate/WDC-Kimberly'),
       authorized: "Authorized by Kimberly Process",
     },
   ];
@@ -49,8 +60,8 @@ const Certification = () => {
           </p>
         </div>
         <div>
-          <div className="relative px-4 py-12 mb-20 text-center bg-white rounded shadow md:px-20 md:py-20">
-            <div className="z-20 max-w-xl p-8">
+          <div className="relative px-4 py-12 mb-20 text-center bg-white rounded shadow md:px-20 md:py-20 transition-[.5s]">
+            <div className="z-20 max-w-xl p-8 transition-[.5s]">
               <div className="flex gap-x-1">
                 <button
                   onClick={prevSlide}
@@ -103,6 +114,11 @@ const Certification = () => {
                   src={currentSlideData.image}
                   alt={`${currentSlideData.title} certification`}
                   priority
+                  width="960"
+                  height="300"
+                  sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 70vw,
+                    30vw"
                   className="object-cover w-full h-full transition-all hover:scale-110 justify-self-center"
                 />
               </div>

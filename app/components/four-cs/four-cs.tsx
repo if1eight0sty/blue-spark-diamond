@@ -33,13 +33,11 @@ const FourCS = () => {
     height: number,
     width: number,
     src: string,
-    crop: string = "limit"
   ) => {
     return getCldImageUrl({
       width,
       height,
       src,
-      crop
     })
   }
   return (
