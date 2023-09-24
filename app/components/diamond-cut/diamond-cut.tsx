@@ -3,46 +3,59 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-
-import "./styles.css";
-
-// import required modules
-import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 import { getCldImageUrl } from "next-cloudinary";
 
 const DiamondCut = () => {
-  const getImageURL = (
-    height: number,
-    width: number,
-    src: string,
-  ) => {
+  const getImageURL = (height: number, width: number, src: string) => {
     return getCldImageUrl({
       width,
       height,
       src,
-    })
-  }
+    });
+  };
 
   const smallImages = [
-    { id: "Blue Spark Diamond", src: getImageURL(200, 400, "blue-spark/logos/logo-white") },
-    { id: "asscher", src: getImageURL(200, 300, "blue-spark/diamond-cuts/asscher-cut") },
-    { id: "cushion", src: getImageURL(200, 300, "blue-spark/diamond-cuts/cushion-cut") },
-    { id: "emerald", src: getImageURL(200, 300, "blue-spark/diamond-cuts/emerald-cut") },
-    { id: "marquise", src: getImageURL(200, 300, "blue-spark/diamond-cuts/marquise-cut") },
-    { id: "princess", src: getImageURL(200, 300, "blue-spark/diamond-cuts/princess-cut") },
-    { id: "heart", src: getImageURL(200, 300, "blue-spark/diamond-cuts/heart-cut") },
-    { id: "pear", src: getImageURL(200, 300, "blue-spark/diamond-cuts/pear-cut") },
-    { id: "round", src: getImageURL(200, 300, "blue-spark/diamond-cuts/round-cut") },
-    { id: "oval", src: getImageURL(200, 300, "blue-spark/diamond-cuts/oval-cut") },
+    // {
+    //   id: "Blue Spark Diamond",
+    //   src: getImageURL(200, 400, "blue-spark/logos/logo-white"),
+    // },
+    {
+      id: "asscher",
+      src: getImageURL(200, 300, "blue-spark/diamond-cuts/asscher-cut"),
+    },
+    {
+      id: "cushion",
+      src: getImageURL(200, 300, "blue-spark/diamond-cuts/cushion-cut"),
+    },
+    {
+      id: "emerald",
+      src: getImageURL(200, 300, "blue-spark/diamond-cuts/emerald-cut"),
+    },
+    {
+      id: "marquise",
+      src: getImageURL(200, 300, "blue-spark/diamond-cuts/marquise-cut"),
+    },
+    {
+      id: "princess",
+      src: getImageURL(200, 300, "blue-spark/diamond-cuts/princess-cut"),
+    },
+    {
+      id: "heart",
+      src: getImageURL(200, 300, "blue-spark/diamond-cuts/heart-cut"),
+    },
+    {
+      id: "pear",
+      src: getImageURL(200, 300, "blue-spark/diamond-cuts/pear-cut"),
+    },
+    {
+      id: "round",
+      src: getImageURL(200, 300, "blue-spark/diamond-cuts/round-cut"),
+    },
+    {
+      id: "oval",
+      src: getImageURL(200, 300, "blue-spark/diamond-cuts/oval-cut"),
+    },
   ];
-
 
   return (
     <>
@@ -55,7 +68,7 @@ const DiamondCut = () => {
             Cut and Shape
           </h1>
         </div>
-        <Swiper
+        {/* <Swiper
           effect={"coverflow"}
           loop={true}
           loopedSlides={4}
@@ -100,7 +113,33 @@ const DiamondCut = () => {
               </Link>
             </SwiperSlide>
           ))}
-        </Swiper>
+        </Swiper> */}
+        <div className="flex flex-col gap-5">
+          {smallImages.map((image) => (
+            <div key={image.id}>
+              <Link
+                href="/product"
+                className="flex flex-col gap-2 justify-center items-center bg-gray-800 h-full scale-95"
+              >
+                <Image
+                  width="200"
+                  height="200"
+                  src={image.src}
+                  style={{ width: "auto" }}
+                  title={`${image.id}-cut-diamond`}
+                  alt={`${image.id}`}
+                  loading="lazy"
+                  property=""
+                  className="h-[4em] object-fill"
+                />
+                <p className="text-white text-center text-lg font-medium capitalize">
+                  {image.id}
+                </p>
+              </Link>
+              
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );
