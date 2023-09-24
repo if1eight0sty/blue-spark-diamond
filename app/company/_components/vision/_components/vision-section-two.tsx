@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 import { GiBrain } from "react-icons/gi";
 import { FaHandsHoldingCircle } from "react-icons/fa6";
 import { PiTreeEvergreenFill } from "react-icons/pi";
 const VisionSectionTwo = () => {
-    return (
-        <>
-            <div className="mt-10 grid grid-cols-1 gap-x-4 gap-y-6 lg:gap-x-8 lg:gap-y-8 md:grid-cols-2 lg:grid-cols-3">
+  return (
+    <>
+      {/* <div className="mt-10 grid grid-cols-1 gap-x-4 gap-y-6 lg:gap-x-8 lg:gap-y-8 md:grid-cols-2 lg:grid-cols-3">
                 <div className="w-full p-8 mb-5 text-center transition-all bg-white rounded shadow hover:shadow-lg">
                     <div className="inline-block p-4 mb-6 -mt-16 bg-blue-400 rounded-full">
                         <GiBrain className="text-[38px]" />
@@ -45,9 +45,10 @@ const VisionSectionTwo = () => {
                         on the environment and limit them.
                     </p>
                 </div>
-            </div>
-        </>
-    )
-}
+            </div> */}
+      Hello There
+    </>
+  );
+};
 
-export default VisionSectionTwo
+export default VisionSectionTwo;
