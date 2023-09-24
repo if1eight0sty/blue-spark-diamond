@@ -43,8 +43,8 @@ const FourCS = () => {
   return (
     <>
       <section className="flex py-10 min-h-[95dvh] bg-white @container">
-        <div className="flex-1" id="zoom-out">
-          <div className="p-10 lg:p-5 h-full">
+        <div className="flex-1" >
+          <div className="lg:p-5 h-full">
             <div className="flex flex-col items-center justify-center h-full">
               {/* top section */}
               <div
@@ -66,10 +66,10 @@ const FourCS = () => {
               </div>
               {/* top section FIN*/}
               {/* four Cs section starts here */}
-              <div className="relative flex flex-col items-center">
+              <div className="relative flex flex-col items-center ">
                 <div className="flex flex-col items-center" data-aos="zoom-in-up" >
                   {/* image section */}
-                  <div className="my-8 border-[5px] border-blue-500 h-[25em] w-[25em] rounded-full flex justify-center items-center relative text-[#585858]">
+                  <div className="my-8 h-[25em] w-[20em] rounded-full flex justify-center items-center relative text-[#585858] px-2">
                     <Image
                       width="300"
                       height="300"
@@ -80,18 +80,18 @@ const FourCS = () => {
                       alt="a diamond picture, vertical sharp diamond"
                       loading='lazy'
                       title="The picture of a diamond"
-                      className="h-full w-full object-fill"
+                      className="h-full w-full object-cover"
                     />
                   </div>
                   {/* image section fin*/}
                   {/* small description od 4c */}
-                  <div className="text-gray-500 flex flex-col gap-y-2 text-[.95rem] leading-[1.75] max-w-[54em] text-justify px-2 ">
+                  <div className="text-gray-500 flex flex-col gap-y-2 text-[.95rem] leading-[1.75] max-w-[54em] text-justify px-4 ">
                     <p className="split-4c">The 4Cs, namely Carat, Cut, Clarity and Color decide the value of a diamond. This universal language was introduced to the world and established through the GIA. The 4Cs are very important in Diamond Grading reports. It&apos;s crucial to learn about the 4Cs of Diamond before purchasing one. At Blue Spark, we hope to educate our customers on the 4Cs very comprehensively.</p>
                   </div>
                   {/* description section fin */}
                 </div>
                 {/* 4c explain individually */}
-                <div className="text-gray-500 mt-5 flex w-full justify-around gap-x-5 @[560px]: max-w-[50em]">
+                <div className="text-gray-500 mt-5 flex w-full justify-around gap-x-5 @[560px]: max-w-[50em] px-6">
                   <div className="flex-1 flex flex-col gap-y-3">
                     {/* cut section */}
                     <div data-aos="zoom-out-up" className="">
