@@ -1,7 +1,18 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { getCldImageUrl } from "next-cloudinary";
 
 const Pricing = () => {
+  // get image url from cloudinary based on the image name/public id
+  const getImageURL = (height: number, width: number, src: string) => {
+    return getCldImageUrl({
+      width,
+      height,
+      src,
+    });
+  };
   return (
     <>
       <section className="mx-10 mt-10 flex flex-col items-center p-10 bg-gray-100 rounded-md">
@@ -28,10 +39,14 @@ const Pricing = () => {
         {/* button section */}
         <div className="flex flex-col xl:flex-row items-center text-center gap-10 mx-10">
           <Image
-            src=""
-            alt="price of diamonds"
-            width={300}
-            height={300}
+            src={getImageURL(
+              900,
+              1800,
+              "blue-spark/diamonds/graph"
+            )}
+            alt="a graph showing the clarity and price per carat of diamonds"
+            width={1080}
+            height={9000}
             priority
             className="bg-gray-300 sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] xl:w-[800px] xl:h-[800px] rounded-lg"
           />
@@ -40,9 +55,9 @@ const Pricing = () => {
             <p className=" bg-white p-5 rounded-lg">
               Blue Spark Diamond Company buys and sells diamonds according to
               the price in the industry. These values are contingent upon the
-              market condition and aren't always stable. In fact, it is
+              market condition and aren&apos;t always stable. In fact, it is
               constantly fluctuating. The provided prices can change without any
-              notice and don't last long.
+              notice and don&apos;t last long.
             </p>
             <p className=" bg-white p-5 rounded-lg">
               Please inquire when placing an order. As Blue Spark Diamond

@@ -1,7 +1,18 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { getCldImageUrl } from "next-cloudinary";
 
 const BuyerSatisfaction = () => {
+  // get image url from cloudinary based on the image name/public id
+  const getImageURL = (height: number, width: number, src: string) => {
+    return getCldImageUrl({
+      width,
+      height,
+      src,
+    });
+  };
   return (
     <>
       <section className="mx-10 mt-10 flex flex-col items-center p-10 bg-gray-100 rounded-md">
@@ -45,10 +56,14 @@ const BuyerSatisfaction = () => {
             </p>
           </div>
           <Image
-            src=""
-            alt="price of diamonds"
-            width={300}
-            height={300}
+            src={getImageURL(
+              900,
+              1800,
+              "blue-spark/diamonds/buyer-satisfaction"
+            )}
+            alt="a diamond placed on a table with a magnifying tool"
+            width={900}
+            height={1080}
             priority
             className="bg-gray-300 sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] xl:w-[800px] xl:h-[800px] rounded-lg"
           />

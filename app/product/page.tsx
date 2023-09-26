@@ -128,14 +128,6 @@ const Page = () => {
     <>
       <section
         className="bg-cover bg-center bg-[#F7F6F3] pb-20"
-        // style={{
-        //   backgroundImage: `url('${getImageURL(
-        //     960,
-        //     1080,
-        //     "blue-spark/background/bg-product"
-        //   )}')`,
-        //   minHeight: "100vh",
-        // }}
       >
         <HeadSection />
         {/* another section */}
@@ -147,9 +139,9 @@ const Page = () => {
         {/* dynamic content */}
         <div
           data-aos="zoom-in"
-          className="flex flex-col lg:flex-row justify-between items-center lg:items-start"
+          className="flex flex-col lg:flex-row justify-between items-center lg:items-start px-10 "
         >
-          <div className="lg:flex-1 flex lg:items-center order-2 lg:order-1 text-gray-500 mt-10 p-5 rounded-md xl:max-w-2xl h-[27em]">
+          <div className="lg:flex-1 flex lg:items-center order-2 lg:order-1 text-gray-500 mt-10 py-5 rounded-md xl:max-w-2xl h-[27em]">
             <p className="">{selectedProduct.desc}</p>
           </div>
           <div className="flex justify-center items-center h-full lg:flex-1 w-full mt-10">

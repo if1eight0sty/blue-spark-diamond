@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Loading() {
+export default function Fallback() {
     return (
         <>
             <div className="w-full h-screen flex justify-center items-center bg-white">
