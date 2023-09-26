@@ -15,14 +15,11 @@ const BuyerSatisfaction = () => {
   };
   return (
     <>
-      <section className="mx-10 mt-10 flex flex-col items-center p-10 bg-gray-100 rounded-md">
-        <div className="justify-center max-w-6xl px-4 py-4 mx-auto md:pt-16 pb-6 md:px-6">
-          <div className="max-w-xl mx-auto">
+      <section className="mt-10 flex flex-col items-center p-10 bg-gray-100 rounded-md">
+        <div className="justify-center py-4 md:pt-16 pb-6">
+          <div className="max-w-xl">
             <div className="text-center ">
               <div className="relative flex flex-col items-center">
-                {/* <div className="absolute hidden md:block -top-14 left-0 text-[120px] text-gray-400 font-bold opacity-10">
-              Pricing
-            </div> */}
                 <h1 className="text-5xl font-bold leading-tight text-[#585858]">
                   Feel Confident Buying
                   <span className="text-blue-500"> Satisfaction</span>
@@ -37,7 +34,7 @@ const BuyerSatisfaction = () => {
           </div>
         </div>
         {/* button section */}
-        <div className="flex flex-col xl:flex-row items-center text-center gap-10 mx-10">
+        <div className="flex flex-col xl:flex-row items-center text-center gap-10">
           {/* description for pricing */}
           <div className="flex flex-col max-w-sm md:max-w-xl gap-5 text-gray-500">
             <p className=" bg-white p-5 rounded-lg">
@@ -65,7 +62,7 @@ const BuyerSatisfaction = () => {
             width={900}
             height={1080}
             priority
-            className="bg-gray-300 sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] xl:w-[800px] xl:h-[800px] rounded-lg"
+            className="bg-gray-300 sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] xl:w-[800px] xl:h-[600px] rounded-lg"
           />
         </div>
       </section>
