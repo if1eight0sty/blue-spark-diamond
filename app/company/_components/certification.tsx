@@ -119,7 +119,7 @@ const Certification = () => {
                   sizes="(max-width: 768px) 100vw,
                     (max-width: 1200px) 70vw,
                     30vw"
-                  className="object-cover w-full h-full transition-all hover:scale-110 justify-self-center"
+                  className="object-cover w-full h-full transition-all justify-self-center"
                 />
               </div>
             </div>

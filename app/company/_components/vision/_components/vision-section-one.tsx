@@ -7,14 +7,16 @@ const VisionSectionOne = () => {
     return (
         <>
             <div className="grid grid-cols-1 gap-x-4 gap-y-6 lg:gap-x-8 lg:gap-y-8 md:grid-cols-2 lg:grid-cols-3">
-                <div className="w-full p-8 mb-5 text-center transition-all bg-white rounded shadow hover:shadow-lg">
-                    <div className="inline-block p-4 mb-6 -mt-16 bg-blue-400 rounded-full">
-                        <MdPolicy className="text-[38px]" />
+                <div className="w-full px-8 mb-5 text-center transition-all bg-white rounded shadow hover:shadow-lg text-[#585858] relative">
+                    <div className="absolute -left-5 -top-5 flex items-center gap-x-3   ">
+                        <div className="p-4 bg-blue-400 rounded-full">
+                            <MdPolicy className="text-[38px]" />
+                        </div>
+                        <h3 className="text-2xl font-semibold mt-7">
+                            Ensuring Ethical Excellence
+                        </h3>
                     </div>
-                    <h3 className="mb-4 text-2xl font-semibold">
-                        Ensuring Ethical Excellence
-                    </h3>
-                    <p className="text-base text-gray-500 ">
+                    <p className="text-base text-gray-500 mt-16 mb-4">
                         Our primary vision is to establish ourselves as the world&apos;s
                         foremost supplier of ethically sourced diamonds. We aim to lead
                         the industry in providing premium, certified, and high-quality
@@ -22,7 +24,7 @@ const VisionSectionOne = () => {
                         sourcing.
                     </p>
                 </div>
-                <div className="w-full p-8 mb-5 text-center transition-all bg-white rounded shadow  hover:shadow-lg">
+                <div className="w-full p-8 mb-5 text-center transition-all bg-white rounded shadow  hover:shadow-lg text-[#585858]">
                     <div className="inline-block p-4 mb-6 -mt-16 bg-blue-400 rounded-full">
                         <VscWorkspaceTrusted className="text-[38px]" />
                     </div>
@@ -38,7 +40,7 @@ const VisionSectionOne = () => {
                         practices, restoring trust to the industry.
                     </p>
                 </div>
-                <div className="w-full p-8 mb-5 text-center transition-all bg-white rounded shadow hover:shadow-lg">
+                <div className="w-full p-8 mb-5 text-center transition-all bg-white rounded shadow hover:shadow-lg text-[#585858]">
                     <div className="inline-block p-4 mb-6 -mt-16 bg-blue-400 rounded-full">
                         <FaFire className="text-[38px]" />
                     </div>
