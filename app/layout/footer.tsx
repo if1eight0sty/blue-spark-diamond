@@ -13,11 +13,7 @@ const Contacts = dynamic(() => import("./_components/footer/contacts"));
 
 const Footer = () => {
   // get image url from cloudinary based on the image name/public id
-  const getImageURL = (
-    height: number,
-    width: number,
-    src: string,
-  ) => {
+  const getImageURL = (height: number, width: number, src: string) => {
     return getCldImageUrl({
       width,
       height,
