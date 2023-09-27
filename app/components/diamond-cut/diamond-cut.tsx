@@ -71,25 +71,25 @@ const DiamondCut = () => {
         <div className="grid grid-cols-3 gap-10 md:gap-14 lg:gap-10 sm:grid-cols-3 lg:grid-cols-9 mt-10 bg-[#F7F6F2] p-10 md:p-20 lg:p-10  rounded-xl drop-shadow-md">
           {smallImages.map((image) => (
             <div key={image.id} className="flex-shrink-0">
-              <Link
+              {/* <Link
                 href="/product"
                 className="flex flex-col gap-2 justify-center items-center h-full scale-95"
-              >
-                <Image
-                  width="200"
-                  height="200"
-                  src={image.src}
-                  style={{ width: "auto" }}
-                  title={`${image.id}-cut-diamond`}
-                  alt={`${image.id}`}
-                  loading="lazy"
-                  property=""
-                  className="h-[4em] object-fill"
-                />
-                <p className="text-black/60 text-center text-sm font-medium lowercase">
-                  {image.id}
-                </p>
-              </Link>
+              > */}
+              <Image
+                width="200"
+                height="200"
+                src={image.src}
+                style={{ width: "auto" }}
+                title={`${image.id}-cut-diamond`}
+                alt={`${image.id}`}
+                loading="lazy"
+                property=""
+                className="h-[4em] object-fill"
+              />
+              <p className="text-black/60 text-center text-sm font-medium lowercase">
+                {image.id}
+              </p>
+              {/* </Link> */}
             </div>
           ))}
         </div>

@@ -1,22 +1,18 @@
-'use client'
+"use client";
 
 import React from "react";
 import Image from "next/image";
-import { getCldImageUrl } from 'next-cloudinary';
+import { getCldImageUrl } from "next-cloudinary";
 
 const CraftingBeauty = () => {
   // get image url from cloudinary based on the image name/public id
-  const getImageURL = (
-    height: number,
-    width: number,
-    src: string,
-  ) => {
+  const getImageURL = (height: number, width: number, src: string) => {
     return getCldImageUrl({
       width,
       height,
       src,
-    })
-  }
+    });
+  };
   return (
     <section className="flex items-center bg-gray-100 font-poppins mt-20">
       <div className="container justify-center flex-1 px-4 py-4 mx-auto text-left lg:py-10 ">
@@ -32,7 +28,11 @@ const CraftingBeauty = () => {
                   width="960"
                   height="300"
                   className="group-hover:origin-center group-hover:scale-110 group-hover:rotate-3 h-[300px] w-full transition duration-500 object-cover"
-                  src={getImageURL(300, 600, 'blue-spark/diamonds/diamond-mining-africa')}
+                  src={getImageURL(
+                    300,
+                    600,
+                    "blue-spark/diamonds/diamond-mining-africa"
+                  )}
                   sizes="(max-width: 768px) 100vw,
                     (max-width: 1200px) 20vw,
                     30vw"
@@ -58,13 +58,16 @@ const CraftingBeauty = () => {
                 <Image
                   width="300"
                   height="300"
-                  src={getImageURL(400, 600, 'blue-spark/diamonds/processed-ore')}
+                  src={getImageURL(
+                    400,
+                    600,
+                    "blue-spark/diamonds/processed-ore"
+                  )}
                   sizes="(max-width: 768px) 100vw,
                     (max-width: 1200px) 20vw,
                     20vw"
                   loading="lazy"
                   className="group-hover:origin-center group-hover:scale-110 group-hover:rotate-3 h-[300px] w-full transition duration-500 object"
-
                   alt="A refined oer of diamond"
                 />
                 <div className="absolute inset-0 h-[300px] group-hover:bg-black opacity-50 transition duration-500 z-0"></div>
@@ -92,7 +95,12 @@ const CraftingBeauty = () => {
                   loop
                   muted
                 >
-                  <source src={"https://res.cloudinary.com/dnfq9u2nu/video/upload/v1695049520/blue-spark/videos/heart-diamond.webm"} type="video/mp4" />
+                  <source
+                    src={
+                      "https://res.cloudinary.com/dnfq9u2nu/video/upload/v1695049520/blue-spark/videos/heart-diamond.webm"
+                    }
+                    type="video/mp4"
+                  />
                   Your browser does not support the video tag.
                 </video>
                 <div className="absolute inset-0 h-[620px] group-hover:bg-black opacity-50 transition duration-500 z-0"></div>
@@ -117,7 +125,11 @@ const CraftingBeauty = () => {
                 <Image
                   width="300"
                   height="300"
-                  src={getImageURL(800, 1080, 'blue-spark/diamonds/diamond-collection-1')}
+                  src={getImageURL(
+                    800,
+                    1080,
+                    "blue-spark/diamonds/diamond-collection-1"
+                  )}
                   sizes="(max-width: 768px) 100vw,
                     (max-width: 1200px) 40vw,
                     20vw"
@@ -145,13 +157,17 @@ const CraftingBeauty = () => {
                 <Image
                   width="300"
                   height="300"
-                  src={getImageURL(800, 1080, 'blue-spark/diamonds/manufacturing-diamond')}
+                  src={getImageURL(
+                    800,
+                    1080,
+                    "blue-spark/diamonds/manufacturing-diamond"
+                  )}
                   sizes="(max-width: 768px) 100vw,
                     (max-width: 1200px) 40vw,
                     20vw"
                   className="group-hover:origin-center group-hover:scale-110 group-hover:rotate-3 h-[300px] w-full transition duration-500"
                   alt="A diamond cutting machine cutting and shaping a diamond"
-                  loading='lazy'
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 h-[300px] group-hover:bg-black opacity-50 transition duration-500 z-0"></div>
                 <div>
