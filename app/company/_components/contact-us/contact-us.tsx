@@ -1,12 +1,11 @@
-
 import React from "react";
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
-const ContactForm = dynamic(() => import("./components/contact-form"))
-const Socials = dynamic(() => import("./components/socials"))
-const Address = dynamic(() => import("./components/address"))
-const Email = dynamic(() => import("./components/email"))
-const Phone = dynamic(() => import("./components/phone"))
+const ContactForm = dynamic(() => import("./components/contact-form"));
+const Socials = dynamic(() => import("./components/socials"));
+const Address = dynamic(() => import("./components/address"));
+const Email = dynamic(() => import("./components/email"));
+const Phone = dynamic(() => import("./components/phone"));
 const ContactUs = () => {
   return (
     <>
