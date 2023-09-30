@@ -1,12 +1,23 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { getCldImageUrl } from "next-cloudinary";
 
 const Pricing = () => {
+  // get image url from cloudinary based on the image name/public id
+  const getImageURL = (height: number, width: number, src: string) => {
+    return getCldImageUrl({
+      width,
+      height,
+      src,
+    });
+  };
   return (
     <>
-      <section className="mx-10 mt-10 flex flex-col items-center p-10 bg-gray-100 rounded-md">
-        <div className="justify-center max-w-6xl px-4 py-4 mx-auto md:pt-16 pb-6 md:px-6">
-          <div className="max-w-xl mx-auto">
+      <section className=" mt-10 flex flex-col items-center p-10 bg-gray-100 rounded-md">
+        <div className="justify-center py-4  md:pt-16 pb-6 md:px-6">
+          <div className="max-w-xl ">
             <div className="text-center ">
               <div className="relative flex flex-col items-center">
                 {/* <div className="absolute hidden md:block -top-14 left-0 text-[120px] text-gray-400 font-bold opacity-10">
@@ -26,23 +37,27 @@ const Pricing = () => {
           </div>
         </div>
         {/* button section */}
-        <div className="flex flex-col xl:flex-row items-center text-center gap-10 mx-10">
+        <div className="flex flex-col xl:flex-row items-center text-center gap-10">
           <Image
-            src=""
-            alt="price of diamonds"
-            width={300}
-            height={300}
+            src={getImageURL(
+              900,
+              1800,
+              "blue-spark/diamonds/graph"
+            )}
+            alt="a graph showing the clarity and price per carat of diamonds"
+            width={1080}
+            height={9000}
             priority
-            className="bg-gray-300 sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] xl:w-[800px] xl:h-[800px] rounded-lg"
+            className="bg-gray-300 sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] xl:w-[800px] xl:h-[600px] rounded-lg"
           />
           {/* description for pricing */}
           <div className="flex flex-col max-w-sm md:max-w-xl gap-5 text-gray-500">
             <p className=" bg-white p-5 rounded-lg">
               Blue Spark Diamond Company buys and sells diamonds according to
               the price in the industry. These values are contingent upon the
-              market condition and aren't always stable. In fact, it is
+              market condition and aren&apos;t always stable. In fact, it is
               constantly fluctuating. The provided prices can change without any
-              notice and don't last long.
+              notice and don&apos;t last long.
             </p>
             <p className=" bg-white p-5 rounded-lg">
               Please inquire when placing an order. As Blue Spark Diamond

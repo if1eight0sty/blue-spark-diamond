@@ -54,7 +54,7 @@ const Page = () => {
           900,
           "blue-spark/fancy-colored-diamonds/Brown-Fancy"
         ),
-        desc: "Fancy brown diamonds are another more frequently encountered colour. In their natural state, they're mostly found in specific locations, such as Australia. The brown colouration doesn't occur in the same higher levels of saturation as other hues, such as yellow. The brown range - with underlying hues towards yellow or red, together with modifiers like green, orange or pink - Is the most broadly occurring fancy colour range. The colour is produced by the stretching and snapping of atomic bonds, caused by sheer pressure during the growth process. This is known as plastic deformation.",
+        desc: "Fancy brown diamonds are another more frequently encountered colour. In their natural state, they're mostly found in specific locations, such as Australia. The brown colouration doesn't occur in the same higher levels of saturation as other hues, such as yellow. The brown range - with underlying hues towards yellow or red, together with modifiers like green, orange or pink, is the most broadly occurring fancy colour range. The colour is produced by the stretching and snapping of atomic bonds, caused by sheer pressure during the growth process. This is known as plastic deformation.",
         color: "#D2B48C",
       },
       {
@@ -128,14 +128,6 @@ const Page = () => {
     <>
       <section
         className="bg-cover bg-center bg-[#F7F6F3] pb-20"
-        // style={{
-        //   backgroundImage: `url('${getImageURL(
-        //     960,
-        //     1080,
-        //     "blue-spark/background/bg-product"
-        //   )}')`,
-        //   minHeight: "100vh",
-        // }}
       >
         <HeadSection />
         {/* another section */}
@@ -147,10 +139,13 @@ const Page = () => {
         {/* dynamic content */}
         <div
           data-aos="zoom-in"
-          className="flex flex-col lg:flex-row justify-between items-center lg:items-start"
+          className="flex flex-col lg:flex-row justify-between items-center lg:items-start px-10"
         >
-          <div className="lg:flex-1 flex lg:items-center order-2 lg:order-1 text-gray-500 mt-10 p-5 rounded-md xl:max-w-2xl h-[27em]">
-            <p className="">{selectedProduct.desc}</p>
+          <div className="lg:flex-1 flex lg:items-center order-2 lg:order-1 text-gray-500 mt-10 py-5 rounded-md  h-[27em]">
+            <div className="w-full">
+              <p className="font-semibold mb-3 text-[1.3rem] capitalize">{selectedProduct.id} diamond</p>
+              <p className="">{selectedProduct.desc}</p>
+            </div>
           </div>
           <div className="flex justify-center items-center h-full lg:flex-1 w-full mt-10">
             <Image
@@ -160,7 +155,7 @@ const Page = () => {
               height={400}
               priority
               style={{ width: "auto" }}
-              className="order-1 lg:order-2 w-full h-full xl:top-[19rem] xl:right-0 lg:h-[27em] px-5 rounded-md object-cover pt-10 text-justify"
+              className="order-1 lg:order-2 w-full h-full xl:top-[19rem] xl:right-0 lg:h-[27em] px-5 lg:pr-5 rounded-md object-cover pt-10 text-justify"
             />
           </div>
         </div>

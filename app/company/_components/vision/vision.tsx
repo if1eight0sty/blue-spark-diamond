@@ -11,11 +11,11 @@ const VisionSectionTwo = dynamic(
 
 const Vision = () => {
   return (
-    <section className="flex items-center justify-center bg-[#F7F6F3]">
-      <div className="px-4 py-20 mx-auto max-w-7xl">
+    <section className="bg-[#F7F6F3] @container">
+      <div className="px-4 py-20 @[600px]:px-8 @[800px]:px-12 @[1250px]:px-20">
         <VisionHeading />
         <VisionSectionOne />
-        <VisionSectionTwo />
+        {/*    <VisionSectionTwo /> */}
       </div>
     </section>
   );

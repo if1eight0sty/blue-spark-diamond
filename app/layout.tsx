@@ -7,6 +7,8 @@ import AppBar from "./layout/app-bar";
 import News from "./layout/news";
 import Footer from "./layout/footer";
 import Scroll from "./components/_scroll/scroll";
+import { Suspense } from "react";
+import Fallback from "./components/fallback";
 
 export const metadata: Metadata = {
   title: "Blue spark diamonds",
@@ -21,13 +23,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white font-[Gantari] relative">
-        <Scroll>
-          <News />
-          <AppBar />
-          {children}
-          <Footer />
-        </Scroll>
+      <body className="bg-white font-[Gantari] relative min-h-screen">
+        <Suspense fallback={<Fallback />}>
+          <Scroll>
+            <News />
+            <AppBar />
+            {children}
+            <Footer />
+          </Scroll>
+        </Suspense>
       </body>
     </html>
   );
