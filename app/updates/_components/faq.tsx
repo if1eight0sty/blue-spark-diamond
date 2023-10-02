@@ -16,47 +16,53 @@ const Faq = () => {
     {
       question: "What is Blue Spark Diamond?",
       answer:
-        "Blue Spark Diamond is a GIA certified company which imports raw diamonds...",
+        "Blue Spark Diamond Company, Nepal's exclusive natural diamond importer, sources rough diamonds from Africa, including Botswana, South Africa, Sierra Leone, Cameroon, Namibia, and Johannesburg. Our vision is to become a leading global integrated group, driven by boundless ambition.",
     },
     {
       question: "Is Blue Spark Diamond a certified company?",
       answer:
-        "Blue Spark Diamond is a GIA certified company which import the raw diamonds...",
+        "Yes, Blue Spark Diamond is a certified company. All diamonds sold by Blue Spark, both through direct and in-auction sales, are GIA Certified and undergo the Kimberly Process, ensuring they are ethically sourced and conflict-free. This guarantees that the diamonds have been evaluated and certified by the Gemological Institute of America and adhere to ethical standards in the diamond industry.",
     },
     {
       question: "How good quality diamonds do we export?",
-      answer: "Answer for the third question...",
+      answer:
+        "We export high-quality diamonds that have undergone GIA Certification and Kimberly Process, ensuring they meet stringent industry standards for both quality and ethical sourcing.",
     },
     {
       question: "Is online payment possible?",
-      answer: "Answer for the fourth question...",
+      answer:
+        "Yes, we do offer online payment options. In addition to accepting direct cash, we also take payments via MasterCard, Debit, and Visa cards. For further details, feel free to reach out to us on WhatsApp.",
+    },
+    {
+      question: "What are the working hours?",
+      answer:
+        "Our working hours are from 10:00 am to 4:00 pm, except on Saturdays and Nepalese public holidays. Despite this, we maintain a global network, ensuring seamless communication with customers worldwide. We're committed to providing uncompromised service and eagerly await your calls, emails, and faxes.",
     },
   ];
 
   return (
     <section className="flex items-center bg-white lg:h-screen">
-      <div className="p-4 mx-auto max-w-7xl text-gray-700">
+      <div className="p-4 mx-auto flex flex-col items-center justify-center max-w-7xl text-gray-700">
         <div className="text-center mb-14">
           <h1 className="mb-4 text-3xl font-bold">
             Frequently Asked Questions
           </h1>
           <p className="max-w-xl mx-auto text-gray-500">You Ask - We Answer</p>
         </div>
-        <div className="max-w-xl">
+        <div className="max-w-xl flex flex-col item-center justify-center">
           {questions.map((q, index) => (
             <div
               key={index}
-              className="flex flex-col justify-between mr-20 w-full px-6 py-4 mb-3 bg-white rounded shadow"
+              className="flex flex-col justify-between mr-20 w-full lg:w-[45rem] px-6 py-4 mb-3 bg-white rounded shadow"
             >
               <div
                 className="flex items-center justify-between cursor-pointer"
                 onClick={() => toggleQuestion(index)}
               >
                 <span
-                  className={`font-bold ${expandedIndexes.includes(index)
-                    ? "text-blue-500"
-                    : ""
-                    }`}
+                  className={`font-bold ${
+                    expandedIndexes.includes(index) ? "text-blue-500" : ""
+                  }`}
                 >
                   {q.question}
                 </span>
@@ -81,9 +87,7 @@ const Faq = () => {
                 </div>
               </div>
               {expandedIndexes.includes(index) && (
-                <div className="mt-1 text-sm text-gray-500">
-                  {q.answer}
-                </div>
+                <div className="mt-1 text-sm text-gray-500">{q.answer}</div>
               )}
             </div>
           ))}

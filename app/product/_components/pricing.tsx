@@ -39,11 +39,7 @@ const Pricing = () => {
         {/* button section */}
         <div className="flex flex-col xl:flex-row items-center text-center gap-10">
           <Image
-            src={getImageURL(
-              900,
-              1800,
-              "blue-spark/diamonds/graph"
-            )}
+            src={getImageURL(900, 1800, "blue-spark/diamonds/graph")}
             alt="a graph showing the clarity and price per carat of diamonds"
             width={1080}
             height={9000}
