@@ -41,28 +41,27 @@ const Faq = () => {
   ];
 
   return (
-    <section className="flex items-center bg-white lg:h-screen">
-      <div className="p-4 mx-auto flex flex-col items-center justify-center max-w-7xl text-gray-700">
-        <div className="text-center mb-14">
+    <section className="flex items-center bg-white lg:min-h-screen">
+      <div className="p-4 flex flex-col items-center justify-center text-gray-700 py-14 w-full" >
+        <div className="text-center">
           <h1 className="mb-4 text-3xl font-bold">
             Frequently Asked Questions
           </h1>
-          <p className="max-w-xl mx-auto text-gray-500">You Ask - We Answer</p>
+          <p className="max-w-xl text-gray-500">You Ask - We Answer</p>
         </div>
-        <div className="max-w-xl flex flex-col item-center justify-center">
+        <div className="flex flex-col item-center justify-center mt-5">
           {questions.map((q, index) => (
             <div
               key={index}
-              className="flex flex-col justify-between mr-20 w-full lg:w-[45rem] px-6 py-4 mb-3 bg-white rounded shadow"
+              className="flex flex-col justify-between w-full lg:w-[45rem] px-6 py-4 mb-3 bg-white rounded shadow"
             >
               <div
                 className="flex items-center justify-between cursor-pointer"
                 onClick={() => toggleQuestion(index)}
               >
                 <span
-                  className={`font-bold ${
-                    expandedIndexes.includes(index) ? "text-blue-500" : ""
-                  }`}
+                  className={`font-bold ${expandedIndexes.includes(index) ? "text-blue-500" : ""
+                    }`}
                 >
                   {q.question}
                 </span>

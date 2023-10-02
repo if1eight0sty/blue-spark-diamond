@@ -31,7 +31,7 @@ const Landing = () => {
         <div className="absolute top-0 right-0 flex w-full bg-gray-800 h-[78%] md:h-2/3 lg:h-[70%]"></div>
         <div className=" px-4 mx-auto">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="relative">
+            <div className="relative bg-gray-800 ">
               <video
                 className="relative z-50 block w-full shadow-lg lg:h-4/6 rounded-lg border"
                 autoPlay
