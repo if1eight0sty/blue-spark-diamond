@@ -56,8 +56,8 @@ const Certification = () => {
           </p>
         </div>
         <div>
-          <div className="relative px-4 py-12 mb-20 text-center bg-white rounded shadow md:px-20 md:py-20 transition-[.5s]">
-            <div className="z-20 max-w-xl p-8 transition-[.5s]">
+          <div className="relative px-4 mb-20 text-center bg-white rounded shadow md:px-20 transition-[.5s] h-[60vh]">
+            <div className="z-20 max-w-xl pb-12 pt-5 transition-[.5s]">
               <div className="flex gap-x-1">
                 <button
                   onClick={prevSlide}
@@ -105,7 +105,7 @@ const Certification = () => {
               <span className="block text-xs font-semibold text-blue-500 uppercase">
                 {currentSlideData.authorized}
               </span>
-              <div className="relative w-full mb-3 text-xs text-white translate-x-1/2 bg-blue-500 rounded right-1/2 -bottom-20 flex justify-center">
+              <div className="w-full bg-blue-500 rounded flex justify-center mt-5">
                 <Image
                   src={currentSlideData.image}
                   alt={`${currentSlideData.title} certification`}
@@ -115,7 +115,7 @@ const Certification = () => {
                   sizes="(max-width: 768px) 100vw,
                     (max-width: 1200px) 70vw,
                     30vw"
-                  className="object-cover w-full h-full transition-all justify-self-center"
+                  className="object-cover w-full h-full transition-all"
                 />
               </div>
             </div>

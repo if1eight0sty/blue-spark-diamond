@@ -77,11 +77,10 @@ const Welcome = () => {
               </p>
             </div>
             <div className="w-full">
-              <div className="relative isolate">
+              <div className="relative isolate bg-gray-900">
                 <video
                   className="relative z-40 object-cover w-full h-80 lg:rounded-tr-[80px] lg:rounded-bl-[80px] rounded"
                   controls
-                  autoPlay
                 >
                   <source
                     src="https://res.cloudinary.com/dnfq9u2nu/video/upload/v1695477667/blue-spark/videos/blue-spark-diamond.webm"
