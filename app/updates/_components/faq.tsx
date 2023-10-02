@@ -41,19 +41,19 @@ const Faq = () => {
   ];
 
   return (
-    <section className="flex items-center bg-white lg:min-h-screen">
-      <div className="p-4 flex flex-col items-center justify-center text-gray-700 py-14 w-full" >
-        <div className="text-center">
+    <section className="flex  bg-white lg:min-h-screen">
+      <div className="p-4 flex flex-col items-center  text-gray-700 py-14 w-full @container" >
+        <div className="text-center mt-5">
           <h1 className="mb-4 text-3xl font-bold">
             Frequently Asked Questions
           </h1>
           <p className="max-w-xl text-gray-500">You Ask - We Answer</p>
         </div>
-        <div className="flex flex-col item-center justify-center mt-5">
+        <div className="flex flex-col item-center mt-5 ">
           {questions.map((q, index) => (
             <div
               key={index}
-              className="flex flex-col justify-between w-full lg:w-[45rem] px-6 py-4 mb-3 bg-white rounded shadow"
+              className="flex flex-col justify-between w-full @[400px]:w-[26em] @[500px]:w-[30em] lg:w-[45rem] px-6 py-4 mb-3 rounded shadow"
             >
               <div
                 className="flex items-center justify-between cursor-pointer"
