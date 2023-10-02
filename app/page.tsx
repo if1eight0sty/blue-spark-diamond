@@ -11,6 +11,10 @@ const DiamondCut = dynamic(
 const GlobalNetwork = dynamic(
   () => import("./components/global-network/global-network")
 );
+const LogoConcept = dynamic(
+  () => import("./components/logo-concept/logo-concept")
+);
+const Team = dynamic(() => import("./components/team/team"));
 import FourCs from "./components/four-cs/four-cs";
 
 export default function Home() {
@@ -21,6 +25,8 @@ export default function Home() {
       <DiamondCut />
       <FourCs />
       <GlobalNetwork />
+      <Team />
+      <LogoConcept />
     </main>
   );
 }

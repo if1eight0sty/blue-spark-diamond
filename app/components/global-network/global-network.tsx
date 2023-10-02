@@ -14,7 +14,7 @@ const GlobalNetwork = () => {
   };
   return (
     <>
-      <section className="flex justify-between gap-5 items-center bg-blue-100 px-20 py-20">
+      <section className="flex justify-between gap-5 items-center bg-blue-100 px-10 lg:px-20 py-20">
         <div className="flex flex-col max-w-xl">
           <h6 className="uppercase font-base text-sm mb-2">
             business across numerous countries
