@@ -70,7 +70,12 @@ const DiamondCut = () => {
         {/* image section */}
         <div className="grid grid-cols-3 gap-10 md:gap-14 lg:gap-10 sm:grid-cols-3 lg:grid-cols-9 mt-10 bg-[#F7F6F2] p-10 md:p-20 lg:p-10  rounded-xl drop-shadow-md">
           {smallImages.map((image) => (
-            <div key={image.id} className="flex-shrink-0">
+            <div
+              key={image.id}
+              className="flex-shrink-0"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
               {/* <Link
                 href="/product"
                 className="flex flex-col gap-2 justify-center items-center h-full scale-95"

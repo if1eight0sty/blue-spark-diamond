@@ -40,7 +40,7 @@ const Timeline = () => {
               <h2 className="inline-block px-4 py-2 mb-4 text-xs font-medium text-gray-100 bg-gradient-to-r from-blue-500 to-blue-900  rounded-3xl">
                 January 2020
               </h2>
-              <div className="relative flex-1 mb-10 bg-white border-b-4 border-blue-200 shadow  rounded-3xl ">
+              <div className="relative flex-1 mb-10 bg-white border-b-4 border-blue-200 shadow  rounded-3xl">
                 <div className="relative z-20 p-6">
                   <p className="mb-2 text-xl font-bold text-gray-600 ">
                     Company Started

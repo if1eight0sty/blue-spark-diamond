@@ -97,7 +97,9 @@ const Faq = () => {
           <h1 className="mb-4 text-3xl font-bold">
             Frequently Asked Questions
           </h1>
-          <p className="max-w-xl text-gray-500">You Ask - We Answer</p>
+          <p className="max-w-xl text-gray-500 uppercase">
+            We Answer Before You Ask
+          </p>
         </div>
         <div className="flex flex-col item-center mt-5">
           {questions.map((q, index) => (
