@@ -33,6 +33,8 @@ const Team = () => {
             src={team}
             alt="team - an image of a teamwork"
             className="object-cover rounded mt-10 px-10"
+            data-aos="fade-up"
+            data-aos-duration="2000"
           />
         </div>
         <p className="text-gray-500 px-10 pb-20 rounded-lg font-normal text-start md:text-center max-w-sm md:max-w-md">

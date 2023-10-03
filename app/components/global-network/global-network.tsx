@@ -46,6 +46,10 @@ const GlobalNetwork = () => {
                     30vw"
           alt="global network - an image with structures forming a network"
           className="object-cover rounded hidden lg:block"
+          data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="500"
+          data-aos-duration="2000"
         />
       </section>
     </>
