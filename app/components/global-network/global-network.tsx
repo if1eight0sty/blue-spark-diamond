@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { getCldImageUrl } from "next-cloudinary";
-import globalnetwork from "@/public/global-network.webp";
 
 const GlobalNetwork = () => {
   // get image url from cloudinary based on the image name/public id
@@ -35,12 +34,11 @@ const GlobalNetwork = () => {
         <Image
           width={700}
           height={500}
-          // src={getImageURL(
-          //   300,
-          //   600,
-          //   "blue-spark/global-network"
-          // )}
-          src={globalnetwork}
+          src={getImageURL(
+            300,
+            600,
+            "blue-spark/global-network"
+          )}
           sizes="(max-width: 768px) 100vw,
                     (max-width: 100px) 20vw,
                     30vw"
