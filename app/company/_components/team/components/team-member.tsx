@@ -7,9 +7,9 @@ const TeamMember = ({ data }: { data: ITeamInfo }) => {
     return (
         <>
             <div
-                className="flex flex-col flex-wrap mb-0 overflow-hidden rounded lg:flex-row cursor-pointer"
+                className="flex flex-col bg-white cursor-pointer w-[30em] ml-8 items-center border rounded shadow h-[45em] -z-10"
             >
-                <div className="w-full overflow-hidden lg:w-2/4 h-[26rem]">
+                <div className="w-[70%] h-[25rem] border">
                     <Image
                         src={data?.image}
                         alt="Chairman of the Blue Spark Diamond Company"
@@ -17,11 +17,11 @@ const TeamMember = ({ data }: { data: ITeamInfo }) => {
                         title={data?.title}
                         width="960"
                         height="300"
-                        sizes="(max-width: 768px) 100vw,(max - width: 1200px) 20vw, 30vw"
-                        className="object-cover w-full h-full transition-all hover:scale-110"
+                        sizes="(max-width: 768px) 100vw, (max - width: 1200px) 20vw, 30vw"
+                        className="object-cover w-full h-full"
                     />
                 </div>
-                <div className="relative flex self-center flex-1 p-8 ml-0 bg-white border rounded shadow lg:items-center lg:-ml-12">
+                <div className="px-8 pt-5 ">
                     <div>
                         <h2 className="mb-2 text-xl font-bold">
                             {data?.name}

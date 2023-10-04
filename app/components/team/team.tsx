@@ -1,8 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import team from "@/public/team.webp";
-
+import { getCldImageUrl } from "next-cloudinary";
 const Team = () => {
+  // get image url from cloudinary based on the image name/public id
+  const getImageURL = (height: number, width: number, src: string) => {
+    return getCldImageUrl({
+      width,
+      height,
+      src,
+    });
+  };
   return (
     <>
       <section className="bg-[#F7F6F3] flex flex-col md:items-center">
@@ -22,15 +29,15 @@ const Team = () => {
           <Image
             width={700}
             height={500}
-            // src={getImageURL(
-            //   300,
-            //   600,
-            //   "blue-spark/global-network"
-            // )}
+            src={getImageURL(
+              300,
+              600,
+              "blue-spark/team/team"
+            )}
             sizes="(max-width: 768px) 100vw,
                             (max-width: 100px) 20vw,
                             30vw"
-            src={team}
+
             alt="team - an image of a teamwork"
             className="object-cover rounded mt-10 px-10"
             data-aos="fade-up"

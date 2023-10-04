@@ -2,7 +2,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import { getCldImageUrl } from 'next-cloudinary';
 import { ITeamInfo } from "./interface";
-
+import Marquee from "react-fast-marquee";
 const TeamHeading = dynamic(() => import("./components/team-heading"));
 const TeamMember = dynamic(() => import("./components/team-member"));
 
@@ -52,14 +52,14 @@ const Team = () => {
     },
   ];
   return (
-    <section className="flex items-center py-24 bg-stone-100 font-poppins text-gray-600">
-      <div className="justify-center flex-1 px-4 py-6 mx-auto max-w-7xl lg:py-4 md:px-6">
+    <section className="flex items-center py-24 bg-stone-100 font-poppins text-gray-600 w-full justify-center @container">
+      <div className="flex items-center flex-1 px-4 py-6 lg:py-4 md:px-6 w-[97vw] flex-col justify-center md:max-w-6xl lg:max-w-7xl">
         <TeamHeading />
-        <div className="grid grid-cols-1 gap-4 lg:gap-8 sm:gap-4 sm:grid-cols-2 lg:grid-cols-2">
+        <Marquee gradient speed={30} className="isolate w-[90%] ">
           {teamInfo.map((teamMember) => (
             <TeamMember key={teamMember?.name} data={teamMember} />
           ))}
-        </div>
+        </Marquee>
       </div>
     </section>
   );
