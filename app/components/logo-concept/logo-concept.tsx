@@ -23,20 +23,16 @@ const LogoConcept = () => {
                 The Wings Of The Hawk
               </h3>
               <p className="text-gray-500 font-normal text-start">
-                A bird with an understanding capacity like no other, which believes
-                in the power of teamwork — The Hawk. The Hawk is not only a symbol
-                of power but also a globally attached to freedom, liberty, power,
-                and grandeur.
+                A bird with an understanding capacity like no other, which
+                believes in the power of teamwork — The Hawk. The Hawk is not
+                only a symbol of power but also a globally attached to freedom,
+                liberty, power, and grandeur.
               </p>
               <div className="flex justify-center [1150px]:w-[40%] [1150px]:hidden">
                 <Image
                   width={1080}
                   height={900}
-                  src={getImageURL(
-                    300,
-                    600,
-                    "blue-spark/logos/logo-concept"
-                  )}
+                  src={getImageURL(300, 600, "blue-spark/logos/logo-concept")}
                   sizes="100vw"
                   alt="team - an image for Blue Spark Diamond logo concept"
                   className="object-cover rounded mt-5"
@@ -47,32 +43,31 @@ const LogoConcept = () => {
               <p className="text-gray-500 font-normal mt-3 text-start">
                 The Hawk is known as one of the most fore-sighted birds. To give
                 flight to its vision and move with graceful speed, Blue Spark
-                Diamond Company has used the Hawk&apos;s wings in its logo. The crown of
-                this kingbird is also included in the logo, which adds to its
-                greatness. The circular shape in the middle is a representation of
-                the earth&apos;s circumference and the separated lines denote a
-                destination that ends beyond the earth. Blue Spark Diamond Company&apos;s
-                main area of expertise is the business of diamonds, therefore, the
-                logo has a diagram of a diamond at its center.
+                Diamond Company has used the Hawk&apos;s wings in its logo. The
+                crown of this kingbird is also included in the logo, which adds
+                to its greatness. The circular shape in the middle is a
+                representation of the earth&apos;s circumference and the
+                separated lines denote a destination that ends beyond the earth.
+                Blue Spark Diamond Company&apos;s main area of expertise is the
+                business of diamonds, therefore, the logo has a diagram of a
+                diamond at its center.
               </p>
             </div>
             <div className="[1150px]:flex justify-center [1150px]:w-[40%] hidden ">
               <Image
                 width={700}
                 height={500}
-                src={getImageURL(
-                  300,
-                  600,
-                  "blue-spark/logos/logo-concept"
-                )}
+                src={getImageURL(300, 600, "blue-spark/logos/logo-concept")}
                 sizes="(max-width: 768px) 100vw,
                             (max-width: 100px) 20vw,
                             30vw"
-            alt="team - an image for Blue Spark Diamond logo concept"
-            className="object-cover rounded my-10 px-10"
-            data-aos="zoom-in"
-            data-aos-duration="2000"
-          />
+                alt="team - an image for Blue Spark Diamond logo concept"
+                className="object-cover rounded mt-5"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </>
