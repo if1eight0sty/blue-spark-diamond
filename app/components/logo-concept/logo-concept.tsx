@@ -46,7 +46,7 @@ const LogoConcept = () => {
                             30vw"
             alt="team - an image for Blue Spark Diamond logo concept"
             className="object-cover rounded my-10 px-10"
-            data-aos="fade-left"
+            data-aos="zoom-in"
             data-aos-duration="2000"
           />
         </div>

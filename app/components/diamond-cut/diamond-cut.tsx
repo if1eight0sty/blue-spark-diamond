@@ -15,10 +15,6 @@ const DiamondCut = () => {
   };
 
   const smallImages = [
-    // {
-    //   id: "Blue Spark Diamond",
-    //   src: getImageURL(200, 400, "blue-spark/logos/logo-white"),
-    // },
     {
       id: "asscher",
       src: getImageURL(200, 300, "blue-spark/diamond-cuts/asscher-cut"),
