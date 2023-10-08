@@ -54,8 +54,7 @@ const AppBar = () => {
                     30vw"
               className=" -mt-1.5 cursor-pointer p-1"
             />
-            {/* me
-                        height={200}nus for the larger screen */}
+            {/*  height={200} for the larger screen */}
             <ul className="gap-x-2 flex @[50em]:gap-x-4 @[60em]:gap-x-7 mb-1 items-baseline">
               <MenuItems link="/" menu="Home" />
               <MenuItems link="/product" menu="Product" />
@@ -111,9 +110,8 @@ const AppBar = () => {
         {/* menus for a small device */}
         {/* menus starts */}
         <aside
-          className={`fixed right-0 top-[4.9em] w-[15em] h-[100dvh] z-[1] bg-gray-800 backdrop-blur-lg text-[#fff] transition @[50em]:hidden p-4 ${
-            toggleMenu ? "" : "translate-x-[100%] duration-[.9s]"
-          }`}
+          className={`fixed right-0 top-[3.75em] w-[15em] h-[100dvh] z-[1] bg-gray-800 text-[#fff] transition @[50em]:hidden p-4 ${!toggleMenu && "translate-x-[100%]"
+            } duration-[.9s]`}
         >
           <ul className="w-full flex flex-col gap-y-3">
             <MenuButton menu="Home" link="/" icon={FaHome} />

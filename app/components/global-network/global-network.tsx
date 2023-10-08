@@ -13,8 +13,8 @@ const GlobalNetwork = () => {
   };
   return (
     <>
-      <section className="flex justify-between gap-5 items-center bg-blue-100 px-10 lg:px-20 py-20">
-        <div className="flex flex-col max-w-xl">
+      <section className="flex justify-between gap-5 items-center bg-blue-100 px-10 lg:px-20 py-20 w-full">
+        <div className="flex flex-col w-full lg:max-w-xl items-center">
           <h6 className="uppercase font-base text-sm mb-2">
             business across numerous countries
           </h6>
