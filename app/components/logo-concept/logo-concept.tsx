@@ -34,11 +34,7 @@ const LogoConcept = () => {
                 <Image
                   width={1080}
                   height={900}
-                  src={getImageURL(
-                    300,
-                    600,
-                    "blue-spark/logos/logo-concept"
-                  )}
+                  src={getImageURL(300, 600, "blue-spark/logos/logo-concept")}
                   sizes="100vw"
                   alt="team - an image for Blue Spark Diamond logo concept"
                   className="object-cover rounded mt-5"
@@ -51,24 +47,21 @@ const LogoConcept = () => {
               >
                 The Hawk is known as one of the most fore-sighted birds. To give
                 flight to its vision and move with graceful speed, Blue Spark
-                Diamond Company has used the Hawk&apos;s wings in its logo. The crown of
-                this kingbird is also included in the logo, which adds to its
-                greatness. The circular shape in the middle is a representation of
-                the earth&apos;s circumference and the separated lines denote a
-                destination that ends beyond the earth. Blue Spark Diamond Company&apos;s
-                main area of expertise is the business of diamonds, therefore, the
-                logo has a diagram of a diamond at its center.
+                Diamond Company has used the Hawk&apos;s wings in its logo. The
+                crown of this kingbird is also included in the logo, which adds
+                to its greatness. The circular shape in the middle is a
+                representation of the earth&apos;s circumference and the
+                separated lines denote a destination that ends beyond the earth.
+                Blue Spark Diamond Company&apos;s main area of expertise is the
+                business of diamonds, therefore, the logo has a diagram of a
+                diamond at its center.
               </p>
             </div>
             <div className="@[1150px]:flex justify-center @[1150px]:w-[40%] hidden">
               <Image
                 width={700}
                 height={500}
-                src={getImageURL(
-                  300,
-                  600,
-                  "blue-spark/logos/logo-concept"
-                )}
+                src={getImageURL(300, 600, "blue-spark/logos/logo-concept")}
                 sizes="(max-width: 768px) 100vw,
                             (max-width: 100px) 20vw,
                             30vw"
