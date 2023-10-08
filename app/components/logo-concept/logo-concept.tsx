@@ -15,7 +15,7 @@ const LogoConcept = () => {
       <section className="flex flex-col items-center justify-center bg-indigo-50 @container">
         <div className="flex flex-col item-center justify-center py-20 px-10">
           <div className="@[1150px]:flex items-center justify-center gap-x-5">
-            <div className="flex flex-col max-w-[750px] items-start justify-center">
+            <div className="flex flex-col max-w-[750px] @[1150px]:max-w-[700px]  items-start justify-center">
               <h6 className="uppercase font-base text-sm text-start mb-2">
                 CONCEPT BEHIND BLUE SPARK DIAMOND COMPANY&apos;S LOGO
               </h6>
