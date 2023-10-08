@@ -42,7 +42,7 @@ const GlobalNetwork = () => {
           sizes="(max-width: 768px) 100vw,
                     (max-width: 100px) 20vw,
                     30vw"
-          alt="global network - an image with structures forming a network"
+          alt="a diagram of a diamond with the names of each diamond and the names of each diamond on the side of the diamond"
           className="object-cover rounded hidden lg:block"
           data-aos="fade-left"
           data-aos-anchor="#example-anchor"
