@@ -15,7 +15,7 @@ const Explore4Cs = () => {
       <section className="@container text-[#585858]" id="scroll-container">
         <div className="flex flex-col gap-x-3">
           {/* cut section */}
-          <div className="w-full flex justify-center items-center flex-col px-6 @[50em]:px-[2.5em]">
+          <div className="w-full flex justify-center items-center flex-col px-6 @[50em]:px-[2.5em]  h-[100dvh]">
             <div className="flex flex-col justify-center my-16">
               <div className="relative @[60em]:pl-[2em]">
                 <h1 className="absolute -top-[2.25rem] left-0 text-[55px] lg:text-[80px] text-gray-900 opacity-10 font-bold opacity- leading-[4.5rem] select-none">
@@ -64,7 +64,7 @@ const Explore4Cs = () => {
 
             </div>
           </div>
-          <div className="w-full flex justify-center items-center flex-col px-6 @[50em]:px-[2.5em]">
+          <div className="w-full flex justify-center items-center flex-col px-6 @[50em]:px-[2.5em]  h-[100dvh]">
             <div className="flex flex-col justify-center my-16">
               <div className="relative @[60em]:pl-[2em]">
                 <h1 className="absolute -top-[2.25rem] left-0 text-[55px] lg:text-[80px] text-gray-900 opacity-10 font-bold opacity- leading-[4.5rem] select-none">
@@ -87,7 +87,7 @@ const Explore4Cs = () => {
                     (max-width: 1200px) 20vw,
                     30vw"
                   alt="a diagram of the different sizes of diamonds and their corresponding sizes of diamonds and their corresponding sizes of diamonds and their corresponding sizes"
-                  className="h-[15em] @[30em]:h-[17em] @[50em]:flex-1 @[60em]:h-[25em] @[80em]:h-[30em]"
+                  className="h-[15em] @[30em]:h-[17em] @[50em]:flex-1 @[60em]:h-[25em]"
                 />
                 <div className="flex-1 @[30em]:px-4 [40em]:px-6 @[50em]:px-0 mt-3 @[50em]:mt-0 flex flex-col gap-y-3 font-medium  @[70em]:pl-[3em]">
                   <h3 className="text-[1.1rem] ">What is Clarity?</h3>
@@ -101,7 +101,44 @@ const Explore4Cs = () => {
               </div>
             </div>
           </div>
-          <div className="w-full flex justify-center items-center flex-col px-6 @[50em]:px-[2.5em]">
+          <div className="w-full flex justify-center items-center flex-col px-6 @[50em]:px-[2.5em] h-[100dvh]">
+            <div className="flex flex-col justify-center my-16">
+              <div className="relative @[60em]:pl-[2em]">
+                <h1 className="absolute -top-[2.25rem] left-0 text-[55px] lg:text-[80px] text-gray-900 opacity-10 font-bold opacity- leading-[4.5rem] select-none">
+                  Color
+                </h1>
+                <h3 className="text-[3rem] leading-[4rem] pb-5 relative before:absolute before:content-[''] before:h-[90%] before:top-0 before:left-0 before:w-[5px]  before:bg-blue-500 pl-4 font-semibold font-mono">
+                  Color
+                </h3>
+              </div>
+              <div className="@[50em]:flex-row items-center justify-center flex flex-col">
+                <Image
+                  width="1080"
+                  height="900"
+                  src={getImageURL(
+                    300,
+                    600,
+                    "blue-spark/four-cs/color"
+                  )}
+                  sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 20vw,
+                    30vw"
+                  alt="a diagram of the different sizes of diamonds and their corresponding sizes of diamonds and their corresponding sizes of diamonds and their corresponding sizes"
+                  className="h-[15em] @[30em]:h-[17em] @[50em]:flex-1"
+                />
+                <div className="flex-1 @[30em]:px-4 [40em]:px-6 @[50em]:px-0 mt-3 @[50em]:mt-0 flex flex-col gap-y-3 font-medium  @[70em]:pl-[3em]">
+                  <h3 className="text-[1.1rem] ">What is Color?</h3>
+                  <p className="text-base leading-7 text-[#585858]/80">
+                    The value of a diamond&apos;s color is graded on a scale from D (colorless) to Z (off-white), reflecting its near-colorless quality. These gradations may seem subtle but require precise evaluation under controlled lighting conditions using a reference set of master diamonds for accuracy.
+                  </p>
+                  <p className="text-base leading-7 text-[#585858]/80">
+                    In addition to colorless diamonds, natural diamonds also exist in captivating colors such as blues, greens, pinks, and more. These rare gems, known as &ldquo;fancy color diamonds&rdquo;, are graded based on the intensity of their unique colors, with more vivid hues commanding higher market values.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full flex justify-center items-center flex-col px-6 @[50em]:px-[2.5em]  h-[100dvh]">
             <div className="flex flex-col justify-center my-16">
               <div className="relative @[60em]:pl-[2em]">
                 <h1 className="absolute -top-[2.25rem] left-0 text-[55px] lg:text-[80px] text-gray-900 opacity-10 font-bold opacity- leading-[4.5rem] select-none">
@@ -124,7 +161,7 @@ const Explore4Cs = () => {
                     (max-width: 1200px) 20vw,
                     30vw"
                   alt="a diagram of the different sizes of diamonds and their corresponding sizes of diamonds and their corresponding sizes of diamonds and their corresponding sizes"
-                  className="h-[15em] @[30em]:h-[17em] @[50em]:flex-1 @[60em]:h-[25em] @[80em]:h-[30em]"
+                  className="h-[15em] @[30em]:h-[17em] @[50em]:flex-1 @[60em]:h-[25em]"
                 />
                 <div className="flex-1 @[30em]:px-4 [40em]:px-6 @[50em]:px-0 mt-3 @[50em]:mt-0 flex flex-col gap-y-3 font-medium  @[70em]:pl-[3em]">
                   <h3 className="text-[1.1rem]">What is Carat?</h3>
