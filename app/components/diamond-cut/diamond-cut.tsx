@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import { getCldImageUrl } from "next-cloudinary";
 
@@ -55,7 +54,7 @@ const DiamondCut = () => {
 
   return (
     <>
-      <section className="flex flex-col items-center justify-center overflow-hidden bg-white font-poppins dark:bg-gray-400 isolate min-h-[95dvh]">
+      <section className="flex flex-col items-center justify-center overflow-hidden bg-white font-poppins dark:bg-gray-400 isolate min-h-[70dvh]">
         <div className="max-w-xl mx-auto text-gray-900 dark:text-white">
           <h1 className="mb-4 text-3xl font-bold text-center">Cut and Shape</h1>
           <p className="mb-16 text-base text-center mx-10">
@@ -72,10 +71,6 @@ const DiamondCut = () => {
               data-aos="zoom-in"
               data-aos-duration="1000"
             >
-              {/* <Link
-                href="/product"
-                className="flex flex-col gap-2 justify-center items-center h-full scale-95"
-              > */}
               <Image
                 width="200"
                 height="200"
@@ -90,7 +85,6 @@ const DiamondCut = () => {
               <p className="text-black/60 text-center text-sm font-medium lowercase">
                 {image.id}
               </p>
-              {/* </Link> */}
             </div>
           ))}
         </div>

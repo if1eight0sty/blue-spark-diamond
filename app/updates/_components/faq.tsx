@@ -105,7 +105,7 @@ const Faq = () => {
           {questions.map((q, index) => (
             <div
               key={index}
-              className="flex flex-col justify-between w-full @[400px]:w-[26em] @[500px]:w-[30em] lg:w-[45rem] px-6 py-4 mb-3 rounded shadow"
+              className="flex flex-col justify-between w-full @[400px]:w-[26em] @[500px]:w-[30em] lg:w-[50em] px-6 py-4 mb-3 rounded shadow"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
@@ -114,9 +114,8 @@ const Faq = () => {
                 onClick={() => toggleQuestion(index)}
               >
                 <span
-                  className={`font-bold font-sans ${
-                    expandedIndexes.includes(index) ? "text-black" : ""
-                  }`}
+                  className={`font-bold font-sans ${expandedIndexes.includes(index) ? "text-black" : ""
+                    }`}
                 >
                   {q.question}
                 </span>

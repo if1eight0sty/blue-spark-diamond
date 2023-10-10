@@ -47,7 +47,7 @@ const ContactForm = () => {
                     />
                     <textarea
                         placeholder="Write a message..."
-                        className="block w-full px-4 mb-4 leading-tight text-gray-700 border rounded bg-gray-50  "
+                        className="block w-full px-4 text-gray-700 border rounded bg-gray-50 py-1 mb-4"
                     ></textarea>
                     <button className="w-full py-4 text-sm font-bold leading-normal text-white transition-all duration-300 bg-blue-600 rounded-md hover:bg-blue-700">
                         Send Message
