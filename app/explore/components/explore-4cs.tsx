@@ -17,7 +17,9 @@ const Explore4Cs = () => {
           {/* cut section */}
           <div className="w-full flex justify-center items-center flex-col px-6 @[50em]:px-[2.5em]  h-[100dvh]">
             <div className="flex flex-col justify-center my-16">
-              <div className="relative @[60em]:pl-[2em]">
+              <div className="relative @[60em]:pl-[2em]"
+                data-aos="fade-up"
+              >
                 <h1 className="absolute -top-[2.25rem] left-0 text-[55px] lg:text-[80px] text-gray-900 opacity-10 font-bold opacity- leading-[4.5rem] select-none">
                   Cut
                 </h1>
@@ -25,7 +27,8 @@ const Explore4Cs = () => {
                   Cut
                 </h3>
               </div>
-              <div className="@[50em]:flex-row items-center justify-center flex flex-col">
+              <div className="@[50em]:flex-row items-center justify-center flex flex-col"
+              >
                 <Image
                   width="1080"
                   height="900"
@@ -39,8 +42,9 @@ const Explore4Cs = () => {
                     30vw"
                   alt="a diagram of a diamond with the names of each diamond and the names of each diamond on the side of the diamond"
                   className="h-[15em] @[30em]:h-[17em] @[50em]:flex-1 @[60em]:h-[25em] @[80em]:h-[30em]"
+                  data-aos="fade-up"
                 />
-                <div className="flex-1 @[30em]:px-4 [40em]:px-6 @[50em]:px-0 mt-3 @[50em]:mt-0 flex flex-col gap-y-3 font-medium  @[70em]:pl-[3em]">
+                <div className="flex-1 @[30em]:px-4 [40em]:px-6 @[50em]:px-0 mt-3 @[50em]:mt-0 flex flex-col gap-y-3 font-medium  @[70em]:pl-[3em]" data-aos="fade-up">
                   <h3 className="text-[1.1rem] ">What is Cut?</h3>
                   <p className="text-base leading-7 text-[#585858]/80">
                     The cut of a diamond is often considered one of its most
@@ -66,7 +70,7 @@ const Explore4Cs = () => {
           </div>
           <div className="w-full flex justify-center items-center flex-col px-6 @[50em]:px-[2.5em]  h-[100dvh]">
             <div className="flex flex-col justify-center my-16">
-              <div className="relative @[60em]:pl-[2em]">
+              <div className="relative @[60em]:pl-[2em]" data-aos="fade-up">
                 <h1 className="absolute -top-[2.25rem] left-0 text-[55px] lg:text-[80px] text-gray-900 opacity-10 font-bold opacity- leading-[4.5rem] select-none">
                   Clarity
                 </h1>
@@ -88,8 +92,9 @@ const Explore4Cs = () => {
                     30vw"
                   alt="a diagram of the different sizes of diamonds and their corresponding sizes of diamonds and their corresponding sizes of diamonds and their corresponding sizes"
                   className="h-[15em] @[30em]:h-[17em] @[50em]:flex-1 @[60em]:h-[25em]"
+                  data-aos="fade-up"
                 />
-                <div className="flex-1 @[30em]:px-4 [40em]:px-6 @[50em]:px-0 mt-3 @[50em]:mt-0 flex flex-col gap-y-3 font-medium  @[70em]:pl-[3em]">
+                <div className="flex-1 @[30em]:px-4 [40em]:px-6 @[50em]:px-0 mt-3 @[50em]:mt-0 flex flex-col gap-y-3 font-medium  @[70em]:pl-[3em]" data-aos="fade-up">
                   <h3 className="text-[1.1rem] ">What is Clarity?</h3>
                   <p className="text-base leading-7 text-[#585858]/80">
                     Diamonds, those timeless gems of immense beauty, originate from a fascinating journey spanning billions of years. They form deep within the Earth under tremendous heat and pressure, emerging during volcanic eruptions. This natural process leaves them with tiny natural features called inclusions, a testament to their origin and history.
@@ -103,7 +108,7 @@ const Explore4Cs = () => {
           </div>
           <div className="w-full flex justify-center items-center flex-col px-6 @[50em]:px-[2.5em] h-[100dvh]">
             <div className="flex flex-col justify-center my-16">
-              <div className="relative @[60em]:pl-[2em]">
+              <div className="relative @[60em]:pl-[2em]" data-aos="fade-up">
                 <h1 className="absolute -top-[2.25rem] left-0 text-[55px] lg:text-[80px] text-gray-900 opacity-10 font-bold opacity- leading-[4.5rem] select-none">
                   Color
                 </h1>
@@ -125,8 +130,9 @@ const Explore4Cs = () => {
                     30vw"
                   alt="a diagram of the different sizes of diamonds and their corresponding sizes of diamonds and their corresponding sizes of diamonds and their corresponding sizes"
                   className="h-[15em] @[30em]:h-[17em] @[50em]:flex-1"
+                  data-aos="fade-up"
                 />
-                <div className="flex-1 @[30em]:px-4 [40em]:px-6 @[50em]:px-0 mt-3 @[50em]:mt-0 flex flex-col gap-y-3 font-medium  @[70em]:pl-[3em]">
+                <div className="flex-1 @[30em]:px-4 [40em]:px-6 @[50em]:px-0 mt-3 @[50em]:mt-0 flex flex-col gap-y-3 font-medium  @[70em]:pl-[3em]" data-aos="fade-up">
                   <h3 className="text-[1.1rem] ">What is Color?</h3>
                   <p className="text-base leading-7 text-[#585858]/80">
                     The value of a diamond&apos;s color is graded on a scale from D (colorless) to Z (off-white), reflecting its near-colorless quality. These gradations may seem subtle but require precise evaluation under controlled lighting conditions using a reference set of master diamonds for accuracy.
@@ -140,7 +146,7 @@ const Explore4Cs = () => {
           </div>
           <div className="w-full flex justify-center items-center flex-col px-6 @[50em]:px-[2.5em]  h-[100dvh]">
             <div className="flex flex-col justify-center my-16">
-              <div className="relative @[60em]:pl-[2em]">
+              <div className="relative @[60em]:pl-[2em]" data-aos="fade-up">
                 <h1 className="absolute -top-[2.25rem] left-0 text-[55px] lg:text-[80px] text-gray-900 opacity-10 font-bold opacity- leading-[4.5rem] select-none">
                   Carat
                 </h1>
@@ -153,8 +159,8 @@ const Explore4Cs = () => {
                   width="1080"
                   height="900"
                   src={getImageURL(
-                    300,
-                    600,
+                    900,
+                    1800,
                     "blue-spark/four-cs/carat"
                   )}
                   sizes="(max-width: 768px) 100vw,
@@ -162,8 +168,9 @@ const Explore4Cs = () => {
                     30vw"
                   alt="a diagram of the different sizes of diamonds and their corresponding sizes of diamonds and their corresponding sizes of diamonds and their corresponding sizes"
                   className="h-[15em] @[30em]:h-[17em] @[50em]:flex-1 @[60em]:h-[25em]"
+                  data-aos="fade-up"
                 />
-                <div className="flex-1 @[30em]:px-4 [40em]:px-6 @[50em]:px-0 mt-3 @[50em]:mt-0 flex flex-col gap-y-3 font-medium  @[70em]:pl-[3em]">
+                <div className="flex-1 @[30em]:px-4 [40em]:px-6 @[50em]:px-0 mt-3 @[50em]:mt-0 flex flex-col gap-y-3 font-medium  @[70em]:pl-[3em]" data-aos="fade-up">
                   <h3 className="text-[1.1rem]">What is Carat?</h3>
                   <p className="text-base leading-7 text-[#585858]/80">
                     In ancient times, carob seeds served as a reference for weighing diamonds. However, our diamond measurement techniques have significantly advanced. Today, we gauge a diamond&apos;s weight in carats, with one carat equivalent to 0.2 grams, further divided into 100 points. Therefore, a half-carat diamond, or 0.50 carats, is also referred to as a 50 points diamond.
