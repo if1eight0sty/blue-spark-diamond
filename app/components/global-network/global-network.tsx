@@ -37,7 +37,7 @@ const GlobalNetwork = () => {
           src={getImageURL(
             300,
             600,
-            "blue-spark/global-network"
+            "blue-spark/network"
           )}
           sizes="(max-width: 768px) 100vw,
                     (max-width: 100px) 20vw,
