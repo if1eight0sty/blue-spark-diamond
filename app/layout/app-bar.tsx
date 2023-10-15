@@ -10,7 +10,7 @@ import { GiBigDiamondRing } from "react-icons/gi";
 import { FaUsers } from "react-icons/fa";
 import { FaQuestion } from "react-icons/fa";
 
-const MenuItems = dynamic(() => import("./_components/appbar/menu-items"), {});
+const MenuItems = dynamic(() => import("./_components/appbar/menu-items"));
 const MenuButton = dynamic(
   () => import("./_components/appbar/menu-button"),
   {}
@@ -110,8 +110,9 @@ const AppBar = () => {
         {/* menus for a small device */}
         {/* menus starts */}
         <aside
-          className={`fixed right-0 top-[3.75em] w-[15em] h-[100dvh] z-[1] bg-gray-800 text-[#fff] transition @[50em]:hidden p-4 ${!toggleMenu && "translate-x-[100%]"
-            } duration-[.9s]`}
+          className={`fixed right-0 top-[3.75em] w-[15em] h-[100dvh] z-[1] bg-gray-800 text-[#fff] transition @[50em]:hidden p-4 ${
+            !toggleMenu && "translate-x-[100%]"
+          } duration-[.9s]`}
         >
           <ul className="w-full flex flex-col gap-y-3">
             <MenuButton menu="Home" link="/" icon={FaHome} />
