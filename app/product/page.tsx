@@ -126,9 +126,7 @@ const Page = () => {
 
   return (
     <>
-      <section
-        className="bg-cover bg-center bg-[#F7F6F3] pb-20"
-      >
+      <section className="bg-cover bg-center bg-[#F7F6F3] pb-20">
         <HeadSection />
         {/* another section */}
         <ColorSelectionSectionLarge
@@ -141,13 +139,17 @@ const Page = () => {
           data-aos="zoom-in"
           className="flex flex-col lg:flex-row justify-between items-center lg:items-start px-10"
         >
-          <div className="lg:flex-1 flex lg:items-center order-2 lg:order-1 text-gray-500 mt-10 py-5 rounded-md  h-[27em]">
+          <div className="lg:flex-1 flex lg:items-center order-2 lg:order-1 text-gray-500 mt-5  rounded h-fit md:h-[27em]">
+            {/* description section */}
             <div className="w-full">
-              <p className="font-semibold mb-3 text-[1.3rem] capitalize">{selectedProduct.id} diamond</p>
+              <p className="font-semibold mb-3 text-[1.3rem] capitalize">
+                {selectedProduct.id} diamond
+              </p>
               <p className="">{selectedProduct.desc}</p>
             </div>
           </div>
-          <div className="flex justify-center items-center h-full lg:flex-1 w-full mt-10">
+          {/* image is shown here */}
+          <div className="flex justify-center items-center h-full lg:flex-1 w-full md:mt-5">
             <Image
               src={selectedProduct.src}
               alt={`${selectedProduct.id}-diamond`}
@@ -155,7 +157,7 @@ const Page = () => {
               height={400}
               priority
               style={{ width: "auto" }}
-              className="order-1 lg:order-2 w-full h-full xl:top-[19rem] xl:right-0 lg:h-[27em] px-5 lg:pr-5 rounded-md object-cover pt-10 text-justify"
+              className="order-1 lg:order-2 w-full h-full xl:top-[19rem] xl:right-0 lg:h-[27em] md:px-5 lg:pr-5 rounded-md object-cover mt-5 text-justify"
             />
           </div>
         </div>
