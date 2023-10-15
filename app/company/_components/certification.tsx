@@ -44,7 +44,7 @@ const Certification = () => {
 
   const currentSlideData = slides[currentSlide];
   return (
-    <section className="flex items-center h-screen bg-gray-100">
+    <section className="flex items-center min-h-screen bg-gray-100">
       <div className="p-4 mx-auto max-w-7xl">
         <div className="mb-10 text-center">
           <h1 className="mb-4 text-3xl font-bold text-gray-600">
@@ -56,12 +56,12 @@ const Certification = () => {
           </p>
         </div>
         <div>
-          <div className="relative px-4 mb-20 text-center bg-white rounded shadow md:px-20 transition-[.5s] h-[60vh]">
-            <div className="z-20 max-w-xl pb-12 pt-5 transition-[.5s]">
+          <div className="relative px-4 text-center bg-white rounded shadow md:px-20 transition-[.5s] pt-6 flex items-center h-[80vh] md:h-[70dvh]">
+            <div className="z-20 max-w-xl pb-12 pt-5 transition-[.5s] ">
               <div className="flex gap-x-1">
                 <button
                   onClick={prevSlide}
-                  className="absolute p-3 text-white -translate-y-1/2 bg-blue-400 rounded -left-2 lg:-left-5 top-1/2"
+                  className="absolute p-3 text-white -translate-y-1/2 bg-blue-400/50  hover:bg-blue-400 rounded -left-2 lg:-left-5 top-1/2 transition-[background-color] duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ const Certification = () => {
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute p-3 text-white -translate-y-1/2 bg-blue-400 rounded -right-2 lg:-right-5 top-1/2"
+                  className="absolute p-3 text-white -translate-y-1/2 bg-blue-400/50   hover:bg-blue-400 rounded -right-2 lg:-right-5 top-1/2 transition-[background-color] duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +105,7 @@ const Certification = () => {
               <span className="block text-xs font-semibold text-blue-500 uppercase">
                 {currentSlideData.authorized}
               </span>
-              <div className="w-full bg-blue-500 rounded flex justify-center mt-5">
+              <div className="w-full rounded flex justify-center mt-5 sm:px-2 md:px-0">
                 <Image
                   src={currentSlideData.image}
                   alt={`${currentSlideData.title} certification`}
