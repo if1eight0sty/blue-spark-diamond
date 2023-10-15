@@ -54,7 +54,7 @@ const DiamondCut = () => {
 
   return (
     <>
-      <section className="flex flex-col items-center justify-center overflow-hidden bg-white font-poppins dark:bg-gray-400 isolate min-h-[70dvh] mt-10">
+      <section className="flex flex-col items-center justify-center overflow-hidden bg-white font-poppins dark:bg-gray-400 isolate min-h-[70dvh] pt-10">
         <div className="max-w-xl mx-auto text-gray-900 dark:text-white">
           <h1 className="mb-4 text-3xl font-bold text-center">Cut and Shape</h1>
           <p className="mb-16 text-base text-center mx-10">
