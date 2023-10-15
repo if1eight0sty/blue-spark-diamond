@@ -114,7 +114,10 @@ const AppBar = () => {
             !toggleMenu && "translate-x-[100%]"
           } duration-[.9s]`}
         >
-          <ul className="w-full flex flex-col gap-y-3">
+          <div className="w-full flex justify-end ">
+            <FlagDropdown />
+          </div>
+          <ul className="w-full flex flex-col gap-y-3 isolate ">
             <MenuButton menu="Home" link="/" icon={FaHome} />
             <MenuButton
               menu="Products"

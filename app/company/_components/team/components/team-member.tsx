@@ -8,12 +8,12 @@ import { ITeamInfo } from "../interface";
 const TeamMember = ({ data }: { data: ITeamInfo }) => {
   return (
     <>
-      <div className="min-h-[50dvh] w-full md:max-w-6xl flex items-center gap-x-5 flex-col @[750px]:flex-row mt-3 @[750px]:mt-0 @[750px]:justify-center">
-        <div
-          className="grid place-items-center isolate overflow-hidden w-[20em]"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
+      <div
+        className="min-h-[50dvh] w-full md:max-w-6xl flex items-center gap-x-5 flex-col @[750px]:flex-row mt-3 @[750px]:mt-0 @[750px]:justify-center"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <div className="grid place-items-center isolate overflow-hidden w-[20em]">
           <div className="h-[15em] border relative before:content-[''] before:absolute before:bg-white before:h-[5em] before:top-[-2.8em] before:right-[-2.6em] before:w-[6em] before:rotate-45 before:border">
             <Image
               src={data?.image}
@@ -41,11 +41,7 @@ const TeamMember = ({ data }: { data: ITeamInfo }) => {
             </div>
           </div>
         </div>
-        <div
-          className="grid place-items-center mt-3 @[750px]:place-items-start"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
+        <div className="grid place-items-center mt-3 @[750px]:place-items-start">
           <div className="max-w-[25em] @[750px]:items-start flex flex-col items-center">
             <h2 className="mb- text-xl font-bold">{data?.name}</h2>
             <p className="mb-3 text-sm text-blue-500">{data?.designation}</p>

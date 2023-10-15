@@ -44,7 +44,7 @@ const Certification = () => {
 
   const currentSlideData = slides[currentSlide];
   return (
-    <section className="flex items-center min-h-screen bg-gray-100">
+    <section className="flex items-center min-h-screen bg-gray-100 isolate">
       <div className="p-4 mx-auto max-w-7xl">
         <div className="mb-10 text-center">
           <h1 className="mb-4 text-3xl font-bold text-gray-600">
