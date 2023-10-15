@@ -87,7 +87,7 @@ const AppBar = () => {
               title="blue spark diamonds"
             />
             {/* ham-burger section starts */}
-            <div className="@[55em]:hidden">
+            <div className="@[55em]:hidden select-none">
               <input
                 className="check-icon"
                 id="check-icon"
