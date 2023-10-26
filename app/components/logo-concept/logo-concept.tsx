@@ -12,7 +12,7 @@ const LogoConcept = () => {
   };
   return (
     <>
-      <section className="flex flex-col items-center justify-center bg-indigo-50 @container">
+      <section className="flex flex-col items-center justify-center bg-indigo-50 @container text-[#585858]">
         <div className="flex flex-col item-center justify-center py-20 px-10">
           <div className="@[1150px]:flex items-center justify-center gap-x-5">
             <div className="flex flex-col max-w-[750px] @[1150px]:max-w-[700px]  items-start justify-center">
@@ -22,13 +22,15 @@ const LogoConcept = () => {
               <h3 className="text-5xl lg:text-6xl font-serif font-bold mb-5">
                 The Wings Of The Hawk
               </h3>
-              <p className="text-gray-500 font-normal text-start" data-aos="fade-up"
+              <p
+                className="text-gray-500 font-normal text-start"
+                data-aos="fade-up"
                 data-aos-duration="2000"
               >
-                A bird with an understanding capacity like no other, which believes
-                in the power of teamwork — The Hawk. The Hawk is not only a symbol
-                of power but also a globally attached to freedom, liberty, power,
-                and grandeur.
+                A bird with an understanding capacity like no other, which
+                believes in the power of teamwork — The Hawk. The Hawk is not
+                only a symbol of power but also a globally attached to freedom,
+                liberty, power, and grandeur.
               </p>
               <div className="flex justify-center @[1150px]:hidden">
                 <Image
@@ -42,7 +44,9 @@ const LogoConcept = () => {
                   data-aos-duration="2000"
                 />
               </div>
-              <p className="text-gray-500 font-normal mt-3 text-start" data-aos="fade-up"
+              <p
+                className="text-gray-500 font-normal mt-3 text-start"
+                data-aos="fade-up"
                 data-aos-duration="2000"
               >
                 The Hawk is known as one of the most fore-sighted birds. To give

@@ -1,35 +1,26 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import { getCldImageUrl } from 'next-cloudinary';
+import { getCldImageUrl } from "next-cloudinary";
 import { ITeamInfo } from "./interface";
-import Marquee from "react-fast-marquee";
 const TeamHeading = dynamic(() => import("./components/team-heading"));
 const TeamMember = dynamic(() => import("./components/team-member"));
 
 const Team = () => {
   // get image url from cloudinary based on the image name/public id
-  const getImageURL = (
-    height: number,
-    width: number,
-    src: string,
-  ) => {
+  const getImageURL = (height: number, width: number, src: string) => {
     return getCldImageUrl({
       width,
       height,
       src,
-    })
-  }
+    });
+  };
 
   const teamInfo: ITeamInfo[] = [
     {
       name: "Yadav Prasad Pathak",
       designation: "Chairman (The Man Behind Blue Spark Diamond)",
       desc: "Mr. Pathak, the visionary leader behind Blue Spark Diamond, has played a pivotal role since its inception. His guiding vision has been instrumental in shaping the company. Blue Diamond and Mr.Pathak both strive to restore elegance to diamonds.",
-      image: getImageURL(
-        300,
-        600,
-        "blue-spark/team/chairman"
-      ),
+      image: getImageURL(300, 600, "blue-spark/team/chairman"),
       title: "Chairman: Yadav Prasad Pathak",
     },
     {
@@ -43,11 +34,7 @@ const Team = () => {
       name: "Rohit Bhattarai",
       designation: "Managing Director of the Blue Spark Diamond Company",
       desc: "As of July 13, 2021, Mr. Rohit Bhattarai serves as the acting managing director of Blue Spark Diamond International Company. With a decade of experience in the diamond industry, Mr. Bhattarai has notably worked within the Rough Diamond Division and various international agencies, primarily in the African Territory.His reputation for precision and strong leadership led to his appointment at Blue Spark in 2021.",
-      image: getImageURL(
-        300,
-        600,
-        "blue-spark/team/md"
-      ),
+      image: getImageURL(300, 600, "blue-spark/team/md"),
       title: "Managing Director: Rohit Bhattarai",
     },
   ];
@@ -55,11 +42,11 @@ const Team = () => {
     <section className="flex items-center py-24 bg-stone-100 font-poppins text-gray-600 w-full justify-center @container">
       <div className="flex items-center flex-1 px-4 py-6 lg:py-4 md:px-6 w-[97vw] flex-col justify-center md:max-w-6xl lg:max-w-7xl">
         <TeamHeading />
-        <Marquee gradient speed={30} className="isolate w-[90%] ">
-          {teamInfo.map((teamMember) => (
-            <TeamMember key={teamMember?.name} data={teamMember} />
-          ))}
-        </Marquee>
+        {/* <Marquee gradient speed={30} className="isolate w-[90%] "> */}
+        {teamInfo.map((teamMember) => (
+          <TeamMember key={teamMember?.name} data={teamMember} />
+        ))}
+        {/* </Marquee> */}
       </div>
     </section>
   );
