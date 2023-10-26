@@ -39,12 +39,12 @@ const Team = () => {
     },
   ];
   return (
-    <section className="flex items-center py-24 bg-stone-100 font-poppins text-gray-600 w-full justify-center @container">
+    <section className="flex items-center py-10 bg-stone-100 font-poppins text-gray-600 w-full justify-center @container">
       <div className="w-full">
         <div className="flex items-center flex-1 px-4 py-6 lg:py-4 md:px-6 w-[97vw] flex-col justify-center md:max-w-6xl lg:max-w-7xl">
           <TeamHeading />
         </div>
-        <div className="bg-white w-full px-4 md:px-6 grid place-items-center pt-10 @[750px]:pt-0">
+        <div className="bg-white w-full px-4 md:px-6 grid place-items-center py-10 @[750px]:pt-0 gap-y-5 min-[700px]:gap-y-0">
           {teamInfo.map((teamMember) => (
             <TeamMember key={teamMember?.name} data={teamMember} />
           ))}

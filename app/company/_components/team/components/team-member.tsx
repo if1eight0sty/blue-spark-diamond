@@ -9,7 +9,7 @@ const TeamMember = ({ data }: { data: ITeamInfo }) => {
   return (
     <>
       <div
-        className="min-h-[50dvh] w-full md:max-w-6xl flex items-center gap-x-5 flex-col @[750px]:flex-row mt-3 @[750px]:mt-0 @[750px]:justify-center"
+        className="min-h-[50dvh] w-full md:max-w-6xl flex items-center gap-x-5 flex-col @[750px]:flex-row @[750px]:justify-center"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
