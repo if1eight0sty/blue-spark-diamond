@@ -7,7 +7,7 @@ const HeadSection = () => {
         <h3 className="font-light text-xs md:text-sm text-[#262626]">
           Blue Spark presents
         </h3>
-        <h1 className="text-[2.5rem] md:text-7xl text-gray-500 font-bold md:font-black">
+        <h1 className="text-[2.5rem] md:text-7xl text-gray-500 font-bold md:font-black leading-[2.5rem]">
           Types of Diamond
         </h1>
       </div>

@@ -25,7 +25,7 @@ const Team = () => {
     },
     {
       name: "Sher Bahadur Karki",
-      designation: "Chairman (The Man Behind Blue Spark Diamond)",
+      designation: "CEO",
       desc: " With a keen eye for diamonds and extensive industry expertise, Mr.Karki is a seasoned figure in the Nepalese diamond market. With over 50 years of experience, he serves as the guiding force at Blue Spark, blending his experience and passion to create a strong presence.",
       image: getImageURL(300, 600, "blue-spark/team/ceo"),
       title: "CEO: Sher Bahadur Karki",
@@ -40,13 +40,15 @@ const Team = () => {
   ];
   return (
     <section className="flex items-center py-24 bg-stone-100 font-poppins text-gray-600 w-full justify-center @container">
-      <div className="flex items-center flex-1 px-4 py-6 lg:py-4 md:px-6 w-[97vw] flex-col justify-center md:max-w-6xl lg:max-w-7xl">
-        <TeamHeading />
-        {/* <Marquee gradient speed={30} className="isolate w-[90%] "> */}
-        {teamInfo.map((teamMember) => (
-          <TeamMember key={teamMember?.name} data={teamMember} />
-        ))}
-        {/* </Marquee> */}
+      <div className="w-full">
+        <div className="flex items-center flex-1 px-4 py-6 lg:py-4 md:px-6 w-[97vw] flex-col justify-center md:max-w-6xl lg:max-w-7xl">
+          <TeamHeading />
+        </div>
+        <div className="bg-white w-full px-4 md:px-6 grid place-items-center pt-10 @[750px]:pt-0">
+          {teamInfo.map((teamMember) => (
+            <TeamMember key={teamMember?.name} data={teamMember} />
+          ))}
+        </div>
       </div>
     </section>
   );

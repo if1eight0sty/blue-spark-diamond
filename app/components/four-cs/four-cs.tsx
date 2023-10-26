@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import "./style.css";
 import SplitType from "split-type";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -68,7 +67,7 @@ const FourCS = () => {
                   data-aos="zoom-in-up"
                 >
                   {/* image section */}
-                  <div className="my-8 h-[25em] w-[20em] rounded-full flex justify-center items-center relative text-[#585858] px-2">
+                  <div className=" h-[20em] w-[20em] rounded-full flex justify-center items-center relative text-[#585858] px-2">
                     <Image
                       width="300"
                       height="300"
@@ -88,7 +87,7 @@ const FourCS = () => {
                   </div>
                   {/* image section fin*/}
                   {/* small description od 4c */}
-                  <div className="text-gray-500 flex flex-col gap-y-2 text-[.95rem] leading-[1.75] max-w-[54em] text-justify px-4 ">
+                  <div className="text-gray-500 flex flex-col gap-y-2 text-[.95rem] leading-[1.75] max-w-[54em] text-justify px-4 -mt-10">
                     <p className="split-4c">
                       The 4Cs, namely Carat, Cut, Clarity and Color decide the
                       value of a diamond. This universal language was introduced
@@ -102,61 +101,56 @@ const FourCS = () => {
                   {/* description section fin */}
                 </div>
                 {/* 4c explain individually */}
-                <div className="text-gray-500 mt-5 flex w-full justify-around gap-x-5 @[560px]: max-w-[50em] px-6">
-                  <div className="flex-1 flex flex-col gap-y-3">
-                    {/* cut section */}
-                    <div data-aos="zoom-out-up" className="">
-                      <h3>Cut</h3>
-                      <p className="text-[.8rem]">
-                        The cut of a diamond is often considered one of its most
-                        important qualities. It takes patience, skill, and
-                        experience for an expert diamond cutter to sculpt a
-                        perfectly proportioned diamond, as inaccuracy will
-                        affect the diamond&apos;s refraction or internal light
-                        performance.
-                      </p>
-                    </div>
-                    {/* cut section end */}
-                    {/* color section start */}
-                    <div data-aos="zoom-out-up" className="">
-                      <h3>Color</h3>
-                      <p className="text-[.8rem]">
-                        Diamonds&apos; color is evaluated on a transparency
-                        scale akin to pure water, graded from D (colorless) to Z
-                        (off-white) due to natural variations. Precise
-                        assessment requires controlled lighting and a master
-                        diamond reference to ensure accurate results.
-                      </p>
-                    </div>
+                <div className="text-gray-500 mt-5  w-full grid grid-cols-2 gap-x-5 @[560px]:max-w-[50em] px-6 gap-y-3">
+                  {/* cut section */}
+                  <div data-aos="zoom-out-up" className="">
+                    <h3>Cut</h3>
+                    <p className="text-[.8rem]">
+                      The cut of a diamond is often considered one of its most
+                      important qualities. It takes patience, skill, and
+                      experience for an expert diamond cutter to sculpt a
+                      perfectly proportioned diamond, as inaccuracy will affect
+                      the diamond&apos;s refraction or internal light
+                      performance.
+                    </p>
+                  </div>
+                  {/* cut section end */}
+                  {/* color section start */}
+                  <div data-aos="zoom-out-up" className="">
+                    <h3>Color</h3>
+                    <p className="text-[.8rem]">
+                      Diamonds&apos; color is evaluated on a transparency scale
+                      akin to pure water, graded from D (colorless) to Z
+                      (off-white) due to natural variations. Precise assessment
+                      requires controlled lighting and a master diamond
+                      reference to ensure accurate results.
+                    </p>
                   </div>
                   {/* color section fin */}
-
-                  <div className="flex-1 flex flex-col gap-y-3">
-                    {/* clarity section start */}
-                    <div data-aos="zoom-out-up" className="">
-                      <h3>Clarity</h3>
-                      <p className="text-[.8rem]">
-                        Every diamond undergoes a magnificent eons-long journey,
-                        forged by immense heat and pressure within the Earth,
-                        then propelled to surface by volcanic activity. This
-                        process commonly leads to formation of tiny inherent
-                        flaws known as inclusions in most diamonds.
-                      </p>
-                    </div>
-                    {/* clarity section fin */}
-                    {/* carat section start */}
-                    <div data-aos="zoom-out-up" className="">
-                      <h3>Carat</h3>
-                      <p className="text-[.8rem]">
-                        In antiquity, carob seeds served as a diamond weight
-                        reference. Modern diamond measurement has vastly
-                        improved, now quantified in carats. One carat equals 0.2
-                        grams, divided into 100 points, so a 0.50-carat diamond
-                        is termed a 50-point diamond.
-                      </p>
-                    </div>
-                    {/* carat section fin */}
+                  {/* clarity section start */}
+                  <div data-aos="zoom-out-up" className="">
+                    <h3>Clarity</h3>
+                    <p className="text-[.8rem]">
+                      Every diamond undergoes a magnificent eons-long journey,
+                      forged by immense heat and pressure within the Earth, then
+                      propelled to surface by volcanic activity. This process
+                      commonly leads to formation of tiny inherent flaws known
+                      as inclusions in most diamonds.
+                    </p>
                   </div>
+                  {/* clarity section fin */}
+                  {/* carat section start */}
+                  <div data-aos="zoom-out-up" className="">
+                    <h3>Carat</h3>
+                    <p className="text-[.8rem]">
+                      In antiquity, carob seeds served as a diamond weight
+                      reference. Modern diamond measurement has vastly improved,
+                      now quantified in carats. One carat equals 0.2 grams,
+                      divided into 100 points, so a 0.50-carat diamond is termed
+                      a 50-point diamond.
+                    </p>
+                  </div>
+                  {/* carat section fin */}
                 </div>
                 {/* individual description fin */}
                 <Link href="/explore" className="mt-10">
