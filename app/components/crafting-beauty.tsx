@@ -1,4 +1,3 @@
-
 import React from "react";
 import Image from "next/image";
 import { getCldImageUrl } from "next-cloudinary";
@@ -152,7 +151,7 @@ const CraftingBeauty = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative mb-6 overflow-hidden rounded-md shadow-md group">
+              <div className="relative overflow-hidden rounded-md shadow-md group">
                 <Image
                   width="300"
                   height="300"

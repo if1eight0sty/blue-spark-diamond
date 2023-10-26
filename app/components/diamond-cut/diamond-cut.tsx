@@ -54,16 +54,16 @@ const DiamondCut = () => {
 
   return (
     <>
-      <section className="flex flex-col items-center justify-center overflow-hidden bg-white font-poppins dark:bg-gray-400 isolate min-h-[70dvh]">
-        <div className="max-w-xl mx-auto text-gray-900 dark:text-white">
+      <section className="flex flex-col items-center justify-center overflow-hidden bg-white font-poppins isolate min-h-[70dvh] pb-3 min-[700px]:pb-0 pt-12">
+        <div className="max-w-xl mx-auto text-gray-900">
           <h1 className="mb-4 text-3xl font-bold text-center">Cut and Shape</h1>
-          <p className="mb-16 text-base text-center mx-10">
+          <p className="mb-12 text-base text-center mx-10">
             Diamonds from Blue Spark are pure from every angle, from its cutting
             to its clarity
           </p>
         </div>
         {/* image section */}
-        <div className="grid grid-cols-3 gap-10 md:gap-14 lg:gap-10 sm:grid-cols-3 lg:grid-cols-9 mt-10 bg-[#F7F6F2] p-10 md:p-20 lg:p-10  rounded-xl drop-shadow-md">
+        <div className="grid grid-cols-3 gap-10 md:gap-14 lg:gap-10 sm:grid-cols-3 lg:grid-cols-9 bg-[#F7F6F2] p-10 md:p-20 lg:p-10 rounded-xl drop-shadow-md">
           {smallImages.map((image) => (
             <div
               key={image.id}

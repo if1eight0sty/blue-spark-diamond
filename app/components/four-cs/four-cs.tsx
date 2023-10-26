@@ -38,7 +38,7 @@ const FourCS = () => {
   };
   return (
     <>
-      <section className="flex pt-5 pb-10 min-h-[95dvh] bg-white @container">
+      <section className="flex pt-10 pb-10 min-h-[95dvh] bg-white @container">
         <div className="flex-1">
           <div className="lg:p-5 h-full">
             <div className="flex flex-col items-center justify-center h-full">

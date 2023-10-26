@@ -13,12 +13,12 @@ const GlobalNetwork = () => {
   };
   return (
     <>
-      <section className="flex justify-between gap-5 items-center bg-blue-100 px-10 lg:px-20 py-20 w-full">
+      <section className="flex justify-between gap-5 items-center bg-blue-100 px-10 lg:px-20 py-20 w-full text-[#585858]">
         <div className="flex flex-col w-full lg:max-w-xl items-center">
           <h6 className="uppercase font-base text-sm mb-2">
             business across numerous countries
           </h6>
-          <h3 className="text-6xl font-serif font-bold mb-5 tracking-wide">
+          <h3 className="text-6xl font-serif font-bold mb-5 tracking-wide text-[#585858]">
             Global Network
           </h3>
           <p className="text-gray-500 font-normal mt-3 text-justify max-w-lg">
@@ -34,11 +34,7 @@ const GlobalNetwork = () => {
         <Image
           width={700}
           height={500}
-          src={getImageURL(
-            300,
-            600,
-            "blue-spark/network"
-          )}
+          src={getImageURL(300, 600, "blue-spark/network")}
           sizes="(max-width: 768px) 100vw,
                     (max-width: 100px) 20vw,
                     30vw"
